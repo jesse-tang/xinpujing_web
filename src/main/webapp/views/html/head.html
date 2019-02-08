@@ -1,0 +1,109 @@
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!--#include virtual="/views/page_title_content.html"-->
+<!--#include virtual="/views/page_title_logo.html"-->
+<link rel="stylesheet" href="/views/css/init.css">
+<link rel="stylesheet" href="/views/css/index.css">
+<link rel="stylesheet" href="/views/css/header.css">
+<link rel="stylesheet" href="/views/css/footer.css">
+<link rel="stylesheet" href="/views/css/left-menu.css">
+<link rel="stylesheet" href="/views/css/register_trail.css">
+<link rel="stylesheet" href="/views/lib/css/liMarquee.css"/>
+<link rel="stylesheet" href="/views/lib/css/swiper.min.css">
+<link rel="stylesheet" href="/views/css/font-awesome.min.css">
+
+<script type="text/javascript" src="/views/lib/js/jquery-1.7.1.js"></script>
+<script type="text/javascript" src="/views/lib/js/swiper.min.js"></script>
+<script type="text/javascript" src="/views/lib/js/jquery.liMarquee.js"></script>
+<script type="text/javascript" src="/views/lib/js/common.js"></script>
+<script type="text/javascript" src="/views/js/float.js"></script>
+<script type="text/javascript" src="/views/js/tab.js"></script>
+<script type="text/javascript" src="/js/enterLiveGame.js"></script>
+<script type="text/javascript" src="/js/lib/util/md5.js"></script>
+<script type="text/javascript" src="/js/lib/jquery/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/lib/layer/layer.js"></script>
+<script type="text/javascript" src="/js/lib/util/error.js"></script>
+<script type="text/javascript" src="/js/notice.js"></script>
+<script type="text/javascript" src="/js/register_trail.js"></script>
+<script type="text/javascript" src="/js/lib/util/httpUtil.js"></script>
+<script type="text/javascript" src="/js/login.js"></script>
+<script type="text/javascript" src="/js/register_check.js"></script>
+<script type="text/javascript">
+    function showNotice() {
+        if (rollNotice != "") {
+            layer.open({
+                type: 1,
+                title: "温馨提示",
+                area: ['500px', 'auto'],
+                btn: ['确认'],
+                content: '<div style="padding: 20px;font-size:16px;">' + rollNotice + '</div>'
+            });
+        }
+    }
+//  忘记密码
+    function openForgetPwd() {
+        window.close();
+        window.open('/user_findPwd.html', 'Go_forget_pwd',
+            'width=390,resizable=yes,height=664,status=no');
+    }
+    // 快速充值
+    function kscz() {
+        var token = $.cookie("token", {path: "/"});
+        if (token == null || token == "") {
+            layer.alert("请登入后再进入充值", {
+                icon: 2,
+                shade: 0
+            })
+        } else {
+            window.location.href = "/page/user-center/user-center.html?startPage=bank-rech"
+        }
+    }
+//    美东时间
+    var dd2 = new Date();
+    $(function () {
+        RefTime();
+        setInterval("RefTime()", 1000); dd2.setHours(dd2.getHours() - 12);
+    });
+    function RefTime() {
+        dd2.setSeconds(dd2.getSeconds() + 1);
+
+        var myYears = (dd2.getYear() < 1900) ? (1900 + dd2.getYear()) : dd2.getYear();
+        var day =dd2.getDay();
+        if(day == "1")
+        {
+            day="一";
+        }else if(day == "2") {
+            day = "二";
+        }else if(day == "3") {
+            day = "三";
+        }else if(day == "4") {
+            day = "四";
+        }else if(day == "5") {
+            day = "五";
+        }else if(day == "6") {
+            day = "六";
+        }else
+        {
+            day="日";
+        }
+        if (document.getElementById("nowTime") != null) {
+            document.getElementById("nowTime").innerHTML = "美东时间：" + myYears + "-" + fixNum(dd2.getMonth() + 1) + "-" + fixNum(dd2.getDate()) + "("+day+") " + time(dd2);
+        }
+    }
+    function time(vtime) {
+        var s = '';
+        var d = vtime != null ? new Date(vtime) : new Date();
+        with (d) {
+            s = fixNum(getHours()) + ':' + fixNum(getMinutes()) + ':' + fixNum(getSeconds())
+        }
+        return (s);
+    }
+    function fixNum(num) {
+        return (parseInt(num) < 10) ? ('0' + num) : num;
+    }
+
+</script>
+<!--#include virtual="/views/redPacket.html"-->
+<!--#include virtual="/views/online_service.html"-->
+<!--#include virtual="/views/leftF.html"-->
+<!--#include virtual="/views/rightF.html"-->

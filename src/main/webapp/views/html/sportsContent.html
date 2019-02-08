@@ -1,0 +1,41 @@
+<div id="center">
+  <div style="clear:both;"></div>
+  <div class="main-wrapper">
+    <div class="sportsContent" style="width: 1000px;margin:10px auto;">
+      <iframe name="iframeMain" id="iframeMain" width="100%" height="800px" style="border: none;"></iframe>
+    </div>
+  </div>
+</div>
+<script>
+  checkIsMaintainDistance = function (start, end) {
+    //体育游戏维护判断逻辑
+    var date = new Date(),
+      timeStamp = date.getTime();
+    if (timeStamp > new Date(start).getTime() && timeStamp < new Date(end).getTime()) {
+      return true;
+    }
+    return false;
+  };
+  initBetConfig = function () {
+    $.ajax({
+      url: '/api/sports/getMaintenanceTime',
+      type: 'POST',
+      cache: false,
+      dataType: 'json',
+      contentType: "application/json",
+      success: function (response) {
+        var time = response.configValue;
+        var start = time.split("~")[0],
+          end = time.split("~")[1];
+        //体育维护
+        if (checkIsMaintainDistance(start, end)) {
+          window.frames['iframeMain'].location.href = "/sports/manitain.html";
+        } else {
+          window.frames['iframeMain'].location.href = "/sports/main.html";
+        }
+      }
+    })
+  };
+  initBetConfig();
+</script>
+

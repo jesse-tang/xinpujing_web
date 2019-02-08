@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>抽奖</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="../js/flexible.js"></script>
+    <script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../js/snowfall.jquery.js"></script>
+    <script type="text/javascript" src="/js/lib/layer/layer.js"></script>
+    <script type="text/javascript" src="js/lottery.js"></script>
+</head>
+<body>
+<div class="tanchuceng" id="login" style="display:none;  z-index:99999999">
+    <div class="tanin" style="height:300px">
+        <div class="chacha" onclick="closeGetWin();">×</div>
+        <div class="tantoux">登录</div>
+        <div class="cl h35"></div>
+        <div class="tac shuzangh">
+            <div style="margin-top: 5px;margin-left: -43px">
+                <span class="">用户名：</span>
+                <input id="username" type="text" value="" placeholder="用户名" />
+            </div>
+            <div style="margin-top: 5px;margin-left: -28px">
+                <span class="">密码：</span>
+                <input id="password" type="password" value="" placeholder="密码" /><br/>
+            </div>
+            <div style="margin-top: 5px;margin-left: -42px">
+                <span class="">验证码：</span>
+                <input type="hidden" id="needVocde" value="1">
+                <input type="text" maxlength="4" id="rmNum" placeholder="验证码">
+            </div>
+            <div style="margin-top: 5px;margin-left: 17px">
+                <img src="/v/vCode?t=0.805408661570851515773119326" id="vImg" style="width: 58px; height: 40px; margin-left:-102px;" onclick="getYzm()">
+            </div>
+        </div>
+        <div class="cl h15"></div>
+        <div class="tac shuzangh">
+            <a href="javascript:;" class="chaaa" onclick="aLeftForm1Sub();" ><img src="images/submit.jpg" class="vm" alt="" /></a>
+        </div>
+        <div class="cl h35"></div>
+    </div>
+</div>
+<!--[if lt IE 8]>
+<p class="browserupgrade">当前浏览器版本太低,建议升级道最新版本</p>
+<![endif]-->
+<div class="gonggao">
+    <span class="notice"></span>
+    <div class="list">
+        <ul class="infoList" id="announce">
+
+        </ul>
+    </div>
+</div>
+<div class="main">
+    <div class="mammon"></div>
+    <!--<input type="text" name="commentNameField" name="username"  id="username" onBlur="if (this.value == '') this.value = '请输入会员账号';" onFocus="if (this.value == '请输入会员账号') this.value = '';" value="请输入会员账号" class="userinput">-->
+    <a href="javascript:;" onClick="getPacket()" class="subbtn"></a>
+</div>
+<div id="hongbao_back" class="hide" style="display:none;"></div>
+<div  id="hongbao_open" class="popup flip" style="display:none;">
+    <div class="popup-t">
+        <a href="javascript:;" onclick="close_hongbao()" class="close"></a>
+        <p class="b5" id="b5">恭喜发财，大吉大利!</p>
+        <a href="javascript:;" onclick="startGame()" class="b6"></a>
+    </div>
+</div>
+<div id="hongbao_result"  class="reward flip" style="display:none;">
+    <div class="reward-t">
+        <a href="javascript:;" onclick="close_hongbao()" class="close"></a>
+    </div>
+    <div class="reward-b">
+        <p class="w2">恭喜发财，大吉大利!</p>
+        <p class="w3">00.00<em>元</em></p>
+    </div>
+</div>
+<script type="text/javascript">
+  lotterylist();
+  function autoScroll(obj){
+    $(obj).find("ul").animate({
+      marginTop : "-1.1rem"
+    },500,function(){
+      $(this).css({marginTop : "0rem"}).find("li:first").appendTo(this);
+    })
+  }
+  $(function(){
+    setInterval('autoScroll(".list")',3000);
+  })
+</script>
+</body>
+</html>

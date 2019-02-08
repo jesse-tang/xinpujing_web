@@ -1,0 +1,11 @@
+[
+  { "code": "cq9", "logoSrc": "/page/eleGame/img/cq9.png", "name": "CQ9电子"},
+  { "code": "mg", "logoSrc": "/page/eleGame/img/mg.png", "name": "MG电子"},
+  { "code": "ag", "logoSrc": "/page/eleGame/img/ag.png", "name": "AG电子"},
+  { "code": "agby", "logoSrc": "/page/eleGame/img/by.png", "name": "AG捕鱼"},
+  { "code": "bbin", "logoSrc": "/page/eleGame/img/bbin.png", "name": "BBIN电子"},
+  { "code": "pt", "logoSrc": "/page/eleGame/img/pt.png", "name": "PT电子"},
+  { "code": "jdb", "logoSrc": "/page/eleGame/img/jdb.png", "name": "JDB电子"},
+  { "code": "hb", "logoSrc": "/page/eleGame/img/hb.png", "name": "HB电子"},
+  { "code": "pg", "logoSrc": "/page/eleGame/img/pg.png", "name": "PG电子"}
+]

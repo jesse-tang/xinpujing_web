@@ -1,0 +1,237 @@
+.page-footer {
+    width: 100%;
+    background: url(/views/img/footer_bg.jpg) no-repeat center top;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footertop {
+    width: 1000px;
+    height: 60px;
+    margin: 0 auto;
+    padding: 20px 0 16px 0;
+}
+
+.footertop .icon {
+    width: 660px;
+    height: 60px;
+    float: left;
+}
+
+.footertop .icon ul li {
+    display: block;
+    float: left;
+    margin-right: 15px;
+}
+
+.ftiright {
+    width: 333px;
+    height: 45px;
+    float: right;
+    padding-top: 15px;
+}
+
+.ArticleList {
+    margin: 0;
+    padding: 0;
+    height: 17px;
+    width: 333px;
+    line-height: 17px;
+    overflow: hidden;
+    text-align: left;
+    color: #f6ca89;
+    font-size: 13px;
+}
+
+.ArticleList a {
+    color: #f6ca89;
+}
+
+.ArticleList a:hover {
+    color: #FFFFFF;
+}
+
+.footermsg {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    color: #f6ca89;
+    font-size: 13px;
+}
+
+#footerbottom {
+    width: 1000px;
+    overflow: hidden;
+    min-height: 306px;
+    margin: 0 auto;
+}
+
+#footerbottom .link {
+    width: 1000px;
+    height: 76px;
+    padding-top: 20px;
+}
+
+#footerbottom .link ul li {
+    display: block;
+    float: left;
+    margin-right: 45px;
+}
+
+#footerbottom .link ul li.last {
+    margin: 0;
+    float: right;
+}
+
+#footerbottom .info {
+    width: 1000px;
+    overflow: hidden;
+    padding: 30px 0;
+}
+
+#footerbottom .info div.list {
+    width: 320px;
+    overflow: hidden;
+    min-height: 410px;
+    float: left;
+}
+
+#footerbottom .info div.service {
+    width: 260px;
+}
+
+#footerbottom .info div.product {
+    border-left: 1px solid #482d22;
+    border-right: 1px solid #482d22;
+    margin: 0 25px;
+    padding: 0 24px;
+}
+
+#footerbottom .info div.list h2 {
+    margin-bottom: 30px;
+}
+
+#footerbottom .info div.service dl {
+    display: block;
+    width: 255px;
+    height: 55px;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+#footerbottom .info div.service dl.m_in {
+    background: url(/views/img/service01.png) no-repeat center top;
+}
+
+#footerbottom .info div.service dl.m_out {
+    background: url(/views/img/service02.png) no-repeat center top;
+}
+
+#footerbottom .info div.service dl.mon {
+    background: url(/views/img/service03.png) no-repeat center top;
+}
+
+#footerbottom .info div.service dl dt {
+    display: block;
+    width: 130px;
+    height: 35px;
+    line-height: 35px;
+    position: absolute;
+    top: 0;
+    right: 40px;
+    font-family: "微软雅黑";
+    color: #ab7748;
+    text-align: right;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+#footerbottom .info div.service dl dd {
+    display: block;
+    width: 2px;
+    height: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #d39859 url(/views/img/bar.png) no-repeat left center;
+    z-index: 3;
+}
+
+#footerbottom .info div.service dl.mon dd {
+    background: none;
+}
+
+#footerbottom .info div.service dl dd.progress {
+    width: 5px;
+    background: #d39859 url(/views/img/bar.png) no-repeat right center;
+    z-index: 2
+}
+
+#footerbottom .info div.service dl dd.opacity {
+    width: 255px;
+    background: #2b1d16 url(/views/img/bar.png) no-repeat right center;
+    z-index: 1;
+}
+
+#footerbottom .info div.product dl {
+    font-family: "微软雅黑";
+    color: #ab7748;
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+
+#footerbottom .info div.product dl dt {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+#footerbottom .info div.product dl dt span {
+    font-size: 12px;
+}
+
+#footerbottom .info div.product dl dd {
+    line-height: 180%;
+    text-align: justify;
+}
+
+#footerbottom .info div.help dl {
+    font-family: "微软雅黑";
+    color: #ab7748;
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+
+#footerbottom .info div.help dl dt {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+#footerbottom .info div.help dl dt span {
+    font-size: 12px;
+}
+
+#footerbottom .info div.help dl dd {
+    line-height: 180%;
+    text-align: justify;
+}
+
+#footerbottom .info div.help ul {
+    display: block;
+    width: 250px;
+}
+
+#footerbottom .info div.help ul li {
+    display: block;
+    float: left;
+    width: 80px;
+}
+
+#footerbottom .info div.help ul li a {
+    color: #ab7748;
+}
+
+#footerbottom .info div.help ul li a:hover {
+    text-decoration: underline;
+}
+
+/* footer end */

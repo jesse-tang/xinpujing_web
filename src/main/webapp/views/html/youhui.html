@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--#include virtual="/views/html/head.html"-->
+  <link rel="stylesheet" href="/views/css/youhui.css">
+</head>
+<body>
+<!--#include virtual="/views/html/header.html"-->
+<div id="center">
+  <div style="clear:both;"></div>
+  <div class="main-wrapper">
+    <div class="discount-list">
+      <ul>
+        <!--#include virtual="/views/youhuiList.html"-->
+      </ul>
+    </div>
+  </div>
+</div>
+<!--#include virtual="/views/html/footer.html"-->
+<script type="text/javascript">
+  $(".LS-youhui").addClass('current').siblings().removeClass('current');
+  $(".discount-list li img").click(function () {
+    $(this).next().slideToggle(100);
+    $(this).parent().siblings().find('.discount-content').slideUp(50);
+  })
+
+  function findByType(type) {
+    if (type == "所有") {
+      $.each($(".discount-list li"), function (index, item) {
+        $(item).css("display", "block")
+      });
+    } else {
+      $.each($(".discount-list li"), function (index, item) {
+        if ($(item).data('type') == type) {
+          $(item).css("display", "block");
+        } else {
+          $(item).css("display", "none");
+        }
+      });
+    }
+  }
+  $(".tab-wrapper a").click(function () {
+    $(this).addClass('active').siblings().removeClass('active');
+    var $type = $(this).data('type');
+    findByType($type);
+  });
+</script>
+</body>
+</html>

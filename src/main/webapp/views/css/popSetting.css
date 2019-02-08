@@ -1,0 +1,64 @@
+@charset "utf-8";
+.wrapper{ margin: 0px auto 10px; }
+/**left menu**/
+.menu-box
+{	
+	width: 200px;
+	margin-right: 15px;
+	z-index: 1;
+	float: left;
+} 
+.leftM{ 
+	width: 180px;
+	position:absolute;
+	top:21px;
+}
+.item{
+	width:192px;
+	height:auto;
+}
+.itemrd{
+	height:auto;
+	text-align: left; 
+	padding-left:10px; 
+	padding-right:7px;
+}
+#subnav span.nav a{
+	height:auto;
+}
+#subnav{
+	overflow-y: auto;
+	width:194px;
+	/*max-height:300px;*/
+}
+#subnav span.nav a{
+	line-height:19px;
+	padding-top:3px;
+	padding-bottom:4px;
+	padding-right:8px;
+}
+.sub_itemline, .itemrd, #subnav_olympic+div#SportsMenu .itemrd, #subnav_olympic+div#SportsMenu .itemrd a, #subnav_olympic+div#SportsMenu .itemrdon, #subnav_olympic div.current a, #subnav_olympic.Special-game div a{
+	background-color:#3A3A3A;
+}
+.itemrd, .itemrd a {
+	background-image: url('../images/layout/color/mask2.png');
+}
+#subnav span.nav a:hover, #subnav span.livelist a:hover, #subnav span.nava a:hover, #subnav span.nava a{
+	background-color:#999;
+}
+.popupcontainerMain h1
+{
+	color:#444;
+}
+.popupcontainerMain .tab th{
+	background-color:#999;
+}
+.popupcontainerMain .tab tr:nth-child(1) > th{
+	background-image: url('../images/layout/color/mask2.png');
+	background-color:#222;
+}
+/**main-box**/
+.main-box{ 
+	padding-left: 213px;
+	min-width: 400px;
+}

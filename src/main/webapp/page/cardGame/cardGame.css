@@ -1,0 +1,109 @@
+
+.jbao-wrap {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background-image: url(/page/cardGame/img/bg_hall.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+.jbao-content {
+    width: 1000px;
+    margin: 12px auto;
+    height: 900px;
+    overflow: hidden;
+    background-image: url(/page/cardGame/img/bg_content.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position:relative;
+}
+.jbao-header {
+    height: auto;
+    width: 100%;
+    line-height: 58px;
+    background-color: #221a17;
+}
+.jbao-header > ul {
+    width: 100%;
+    height: 58px;
+    display: -webkit-box;
+    display: -moz-box;
+    display:-webkit-flex;
+    display: -ms-flexbox;
+    display:flex;
+}
+.jbao-header > ul > li {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+    color: #a9a7a7;
+}
+/*.jbao-header > ul > li:hover {*/
+    /*background-color: #221a17;*/
+    /*border: 1px solid #2a2a2a;*/
+/*}*/
+.jbao-header > ul > li.CardTabStyle {
+    background-color: #5c2318;
+    border: 1px solid #2a2a2a;
+    font-size: 18px;
+    color: #ffffff;
+}
+.jbao-list-wrap {
+    width: 1006px;
+    height: 736px;
+    overflow-y: scroll;
+}
+.jbao-list-row {
+    width: 18%;
+    float: left;
+    height: 214px;
+    margin: 28px 1% 0;
+    cursor: pointer;
+}
+.jbao-list-icno {
+    width: 100%;
+    height: 160px;
+    text-align: center;
+}
+.jbao-list-icno > img {
+    display: inline-block;
+    height: 124px;
+    margin-top: 12px;
+}
+.jbao-list-name {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #ebba5e;
+    font-size: 14px;
+    font-weight: 700;
+    background: url(/page/cardGame/img/cardBtnBJ.png) no-repeat top center;
+}
+
+.jbao-page-wrap {
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    line-height: 60px;
+}
+.jbao-page-wrap > button
+{
+    background-color: #5c2318;
+    color: #ffffff;
+    border: 0;
+    outline: 0;
+    padding: 8px 24px;
+    border-radius: 6px;
+    box-shadow: 1px 0 2px #949494;
+    cursor: pointer;
+}
+.jbao-footer {
+    width: 100%;
+    height: 46px;
+    background: url(/page/cardGame/img/bg_footer.png) no-repeat top center;
+    background-size: 100%;
+}

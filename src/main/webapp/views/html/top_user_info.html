@@ -1,0 +1,90 @@
+<style>
+
+  #passWord {
+    display: none !important;
+  }
+
+  .reg-btn {
+    display: none !important;
+  }
+
+  .login-key {
+    text-align: right;
+    color: #dcdcdc;
+  }
+
+  .key-wrap {
+    width: 100% !important;
+  }
+
+  .user-wrapper div {
+    line-height: 25px;
+  }
+
+  .user-wrapper a {
+    color: #dcdcdc;
+    margin-left: 2px;
+    font-size: 12px;
+  }
+  .user-wrapper .unline:hover
+  {
+    text-decoration: underline;
+  }
+</style>
+<div class="logined-box">
+  <div class="islogin-wrapper">
+    <div class="user-wrapper">
+      <div>
+        <a >账号：</a>
+        <a id="userName" class="top_u_account" style="color: #dfd927;">anan123</a>
+        <a >系统余额：￥</a>
+        <a id="Credit" class="top_u_money" style="color: #dfd927;">0</a>
+        <a class="unline" href="javascript:getUserInfoTop();">刷新</a>
+        <a class="unline" style="padding-left: 10px;" href="/page/user-center/user-center.html?startPage=replacement">额度转换</a>
+        <a>|</a>
+        <a class="unline" href="/page/user-center/user-center.html?startPage=bank-rech">线上存款</a>
+        <a>|</a>
+        <a class="unline" href="/page/user-center/user-center.html?startPage=bank-withdraw">线上取款</a>
+        <a>|</a>
+        <a class="unline" href="/page/user-center/user-center.html">用户中心</a>
+        <a>|</a>
+        <a class="unline" href="/page/user-center/user-center.html?startPage=cms-message" id="msg">未读讯息<b>(<em id="top_newCount" class="top_newCount"></em>)</b></a>
+        <a>|</a>
+        <a class="unline" href="javascript:;" onclick="mem_logout();" class="logout">退出</a>
+      </div>
+      <b style="height:32px;line-height:32px;display:none;" id="loginWin">(<em id="count" class="count" class="top_newCount"></em>)</b>
+    </div>
+  </div>
+</div>
+<script language=javascript type=text/javascript>
+    $(document).ready(function () {
+        getUserInfoTop();
+    });
+
+    function getUserInfoTop() {
+        $(".top_u_money").html("...");
+        $.ajax({
+            type: "GET",
+            url: HttpUtil.baseUrl + "/api/user/info",
+            dataType: "json",
+            success: function (data) {
+                if (data != null) {
+                    if (data.userInfo != null && data.userInfo != "") {
+                        $(".top_u_account").html(data.userInfo.account);
+                    }
+                    if (data.extInfo != null && data.extInfo != "") {
+                        $(".top_u_money").html(data.extInfo.money);
+                    }
+                    $("#top_newCount").html(data.unReadCount);
+                }
+            },
+            error: function (data) {
+                if (data.code == 'UC/TOKEN_INVALID') {
+                    mem_logout();
+                }
+            }
+        });
+
+        $("#passWord").remove();
+    }
+</script>

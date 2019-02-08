@@ -1,0 +1,56 @@
+.banner-wrapper {
+    width: 100%;
+    height: 346px;
+    background: url("/views/img/title_memberexclusiveii.jpg") center;
+}
+.main-wrapper {
+    width: 1000px;
+    height: auto;
+    margin: 10px auto;
+    margin-top: 0px;
+}
+ .banneryh{
+     background: url(/views/img/youhui.png) no-repeat;
+     height:240px;
+ }
+.main-wrapper .tab-wrapper {
+    width: 960px;
+    height: auto;
+    margin: 1.5em auto;
+    border-bottom:2px solid #4c2713;
+    overflow: hidden
+}
+.main-wrapper .tab-wrapper a {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-right: 4px;
+    padding: 5px 10px;
+    border-radius: 5px 5px 0 0;
+    transition: background-color .4s;
+    background-color: #613a19;
+    color: #fff;
+    line-height: 1
+}
+.main-wrapper .tab-wrapper .active {
+    background-color: #613a19;
+    color: #fff;
+}
+.main-wrapper .tab-wrapper a:hover {
+    color:#bea440;
+}
+.main-wrapper .discount-list {
+    width: 966px;
+    height: auto;
+    margin: 15px auto;
+    overflow: hidden
+}
+.main-wrapper .discount-list li {
+    margin-bottom: 5px
+}
+.main-wrapper .discount-list li img {
+    cursor: pointer
+}
+.main-wrapper .discount-list li .discount-content {
+    display: none;
+    line-height: 20px
+}

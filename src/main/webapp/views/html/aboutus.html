@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--#include virtual="/views/html/head.html"-->
+  <link rel="stylesheet" href="/views/css/aboutus.css">
+</head>
+<body style="">
+<!--#include virtual="/views/html/header.html"-->
+<div id="center">
+  <div style="clear:both;"></div>
+  <div class="main-wrapper">
+    <div class="main-content">
+      <!--#include virtual="/views/html/left-menu.html"-->
+      <div>
+        <div class="right-wrapper" id="aboutus">
+          <!--#include virtual="/views/aboutus.html"-->
+        </div>
+        <div class="right-wrapper" id="contactus">
+          <!--#include virtual="/views/contactus.html"-->
+        </div>
+        <div class="right-wrapper" id="agent">
+          <h1>优惠条款</h1>
+          <div class="text">
+            <!--<dl>-->
+              <!--<dd data-index="plan" class="ag-btn">联盟方案</dd>-->
+              <!--<span>|</span>-->
+              <!--<dd data-index="agreement" class="ag-btn">联盟协议</dd>-->
+              <!--<span>|</span>-->
+              <!--<dd><a href="#" target="_bank">代理登入</a></dd>-->
+            <!--</dl>-->
+            <div>
+              <!--#include virtual="/views/agent.html"-->
+            </div>
+          </div>
+        </div>
+        <div class="right-wrapper" id="deposit">
+          <!--#include virtual="/views/deposit.html"-->
+        </div>
+        <div class="right-wrapper" id="draw">
+          <!--#include virtual="/views/draw.html"-->
+        </div>
+        <div class="right-wrapper" id="problem">
+          <!--#include virtual="/views/problem.html"-->
+        </div>
+        <div class="right-wrapper" id="rule">
+          <!--#include virtual="/views/rule.html"-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--#include virtual="/views/html/footer.html"-->
+<script type="text/javascript">
+  function getUrlParam(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) return unescape(r[2]);
+    return null;
+  }
+
+  var $page = getUrlParam('page');
+  $("#" + $page).css("display", "block").siblings().css("display", "none");
+
+  $(".ag-btn").click(function () {
+    var $plan = $(this).data('index');
+    $("." + $plan).css("display", "block").siblings().css("display", "none");
+  })
+</script>
+</body>
+</html>

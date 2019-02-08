@@ -1,0 +1,49 @@
+<style>
+.alert-notice-warp .layui-layer-content {
+     font-size: 16px;
+     color: #333;
+     line-height: 30px;
+     text-indent:24px;
+     height:515px !important;
+}
+.alert-notice-warp .layui-layer-content img {
+    float:left;
+}
+</style>
+<script type="text/javascript">
+if(1 === 0)
+{
+  if ($.cookie("alertShade",{path:"/"}) != 'ok') {
+    if (1 === 0) {
+      layer.open({
+        skin: 'alert-notice-warp',
+        title: "11.11新老会员优惠大活动",
+        shadeClose: false,
+        type: 1,
+        area: ['702px','610px'],
+        btn:'关闭',
+        content: ' <a href="/views/html/youhui.html"><img style="width:100%;" src="/views/image/" /></a>',
+        yes:function () {
+           $.cookie("alertShade",'false',{path:"/"});
+          layer.closeAll();
+        }
+      });
+    } else {
+      layer.open({
+        skin: 'alert-notice-warp',
+        title: "11.11新老会员优惠大活动",
+        shadeClose: false,
+        type: 1,
+        area: ['632px','324px'],
+        btn:'关闭',
+        content: '<span style="font-weight: 700">新葡京娱乐场(0363.com)11.11新老会员优惠大活动</span><p><span style="font-size: 14px; color: #FF0000; font-weight: 700">凡11号00：00-23：59新老会员存款优惠如下：</span></p><p><span style="font-size: 14px; color: #FF0000; font-weight: 700">存100返11.11</span></p><p><span style="font-size: 14px; color: #FF0000; font-weight: 700">存1000返：111.1</span></p><p><span style="font-size: 14px; color: #FF0000; font-weight: 700">存10000返1111</span></p><p><span style="font-weight: 700; font-size: 14px; color: #FF0000">存100000返11111</span></p><p><span style="font-size: 14px; color: #FF0000; font-weight: 700">当天会员只能首次存款赠送，</span><span style="font-weight: 700; font-size: 14px; color: #FF0000">只需一倍流水，即可提现！</span></p><p><span style="font-size: 14px; color: #FF0000; font-weight: 700">以些类推！在线存款的需要联系客服申请！</span></p><p><font face="黑体"><b>充值过程中遇到问题，</b></font></p><p><font face="黑体"><span style="font-weight:700">请联系在线客服或微信ppjj0363或QQ71327666全天24小时为您服务</span></font></p>',
+        yes:function () {
+          $.cookie("alertShade",'false',{path:"/"});
+          layer.closeAll();
+        }
+      });
+    }
+   
+  }
+}
+</script>

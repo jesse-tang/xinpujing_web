@@ -1,0 +1,34 @@
+[
+        {
+            "modelName": "首页",
+            "modelType": "home"
+        },
+        {
+            "modelName": "购彩",
+            "modelType": "shopping"
+        },
+        {
+            "modelName": "开奖",
+            "modelType": "gift"
+        },
+        {
+            "modelName": "走势",
+            "modelType": "line"
+        },
+        {
+            "modelName": "我的",
+            "modelType": "user"
+        },
+        {
+            "modelName": "长龙",
+            "modelType": "long"
+        },
+        {
+            "modelName": "充值",
+            "modelType": "cz"
+        },
+        {
+            "modelName": "优惠",
+            "modelType": "yh"
+        }
+]

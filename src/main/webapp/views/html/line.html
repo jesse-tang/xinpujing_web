@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--#include virtual="/views/html/head.html"-->
+  <link rel="stylesheet" href="/views/css/line.css">
+  <style>
+    .bannerjm{
+      background: url(/views/img/agent.png) no-repeat;
+      height:240px;
+    }
+  </style>
+</head>
+<body>
+<!--#include virtual="/views/html/header.html"-->
+<div id="center">
+  <div style="clear:both;"></div>
+  <div class="main-wrapper">
+    <div class="content-wrapper">
+      <!--#include virtual="/views/html/left-menu.html"-->
+      <div class="right-wrapper">
+        <div class="line-wrapper">
+          <div class="line-list">
+            <ul class="line-ul">
+            </ul>
+            <a href="javascript:;" onclick="getLise();" class="reset"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--#include virtual="/views/html/footer.html"-->
+<script type="text/javascript">
+  $(".index").removeClass('current');
+  var lineArr = [
+
+
+//      "https://www.mm78.com",
+//    "https://www.mm53.com",
+//    "https://www.mm93.com",
+//    "https://www.mm788.com",
+//    "https://www.mm200.com",
+//    "https://www.mm300.com",
+//    "https://www.mm1234.com",
+
+
+<!--#include virtual="/views/line_content.html"-->
+
+  ];
+
+  var timeArr = ["2.1ms", "3.9ms", "2.0ms", "1.8ms"];
+
+  function randomNum(minNum, maxNum) {
+    switch (arguments.length) {
+      case 1:
+        return parseInt(Math.random() * minNum + 1, 10);
+        break;
+      case 2:
+        return parseInt(Math.random() * (maxNum - minNum + 1) + minNum, 10);
+        break;
+      default:
+        return 0;
+        break;
+    }
+  }
+
+  function getLise() {
+    var oLi = "";
+    for (var i = 0; i < lineArr.length; i++) {
+      oLi += "<li>";
+      oLi += "<span>" + timeArr[randomNum(0, 3)] + "</span>";
+      oLi += "<span></span>";
+      oLi += "<span>" + lineArr[i] + "</span>";
+      oLi += "<a href='" + lineArr[i] + "' target='_blank'></a>";
+      oLi += "</li>";
+    }
+    $(".line-ul").html(oLi);
+  }
+  getLise();
+
+</script>
+</body>
+</html>

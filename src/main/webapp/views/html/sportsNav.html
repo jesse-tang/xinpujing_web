@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--#include virtual="/views/html/head.html"-->
+  <link rel="stylesheet" href="/views/css/sportsNav.css">
+</head>
+<body>
+<!--#include virtual="/views/html/header.html"-->
+<div id="center">
+  <div style="clear:both;"></div>
+  <div class="main-wrapper">
+    <div class="sportsContent" style="width: 1000px;margin:10px auto;">
+      <div id="wrapw">
+        <div class="sports-container">
+          <ul class="sports-list">
+            <li class="hg-s">
+              <a href="/views/html/sports.html">
+                <img src="/views/img/hg.png" width="300" height="380">
+                <span class="btn-name">皇冠体育</span>
+              </a>
+            </li>
+            <li class="ts-s">
+              <a href="javascript:;" onclick="EnterLiveGame('bb')">
+                <img src="/views/img/ts.png" width="300" height="380">
+                <span class="btn-name">BB体育</span>
+              </a>
+            </li>
+            <li class="sp-s">
+              <a href="/views/html/popContents.html" target="_blank" class="sp-rule">投注规则</a>
+              <a href="javascript:;" onclick="EnterLiveGame('sb')">
+                <img src="/views/img/sp.png" width="300" height="380">
+                <span class="btn-name">沙巴体育</span>
+              </a>
+            </li>
+            <li class="ug-s">
+              <a href="javascript:;" onclick="EnterLiveGame('m8')">
+                <img src="/views/img/ug.png" width="300" height="380">
+                <span class="btn-name">M8体育</span>
+              </a>
+            </li>
+            <li class="more-s"></li>
+            <li class="more-s"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--#include virtual="/views/html/footer.html"-->
+<script type="text/javascript">
+    $(".LS-ball").addClass('current').siblings().removeClass('current');
+</script>
+<script>
+    checkIsMaintainDistance = function (start, end) {
+        //体育游戏维护判断逻辑
+        var date = new Date(),
+            timeStamp = date.getTime();
+        if (timeStamp > new Date(start).getTime() && timeStamp < new Date(end).getTime()) {
+            return true;
+        }
+        return false;
+    };
+    initBetConfig = function () {
+        $.ajax({
+            url: '/api/sports/getMaintenanceTime',
+            type: 'POST',
+            cache: false,
+            dataType: 'json',
+            contentType: "application/json",
+            success: function (response) {
+                var time = response.configValue;
+                var start = time.split("~")[0],
+                    end = time.split("~")[1];
+                //体育维护
+                if (checkIsMaintainDistance(start, end)) {
+                    window.frames['iframeMain'].location.href = "/sports/manitain.html";
+                } else {
+                    window.frames['iframeMain'].location.href = "/sports/main.html";
+                }
+            }
+        })
+    };
+    initBetConfig();
+</script>
+</body>
+</html>

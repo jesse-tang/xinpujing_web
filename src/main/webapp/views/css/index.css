@@ -1,0 +1,305 @@
+/*首页主图*/
+.banner-wrapper {
+    overflow: hidden;
+    width: 100%;
+    height: 507px;
+    position: relative;
+    margin-top: 107px;
+    background: url("/views/img/banner_index.jpg") center;
+}
+
+.banner-wrapper .center {
+    width: 1000px;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -500px;
+    overflow: hidden;
+    z-index: 50;
+}
+
+/*主页内容*/
+.indexbg {
+    width: 100%;
+    height: 360px;
+    background: url(/views/img/contain_bg.jpg) repeat;
+}
+
+.first_news {
+    padding-top: 25px;
+}
+
+.first_news_box {
+    width: 1000px;
+    height: 66px;
+    background: url(/views/img/news_bg.png) top center no-repeat;
+    margin: 0 auto;
+    position: relative;
+}
+
+#news-link {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    z-index: 1;
+}
+
+#news-link li {
+    float: left;
+    width: 101px;
+    height: 29px;
+    text-align: center;
+}
+
+#news-link li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: #fff9bd;
+    font-family: SimSun;
+    font-size: 12px;
+    line-height: 29px;
+    text-decoration: none;
+}
+
+#news-link li.promotion-bg {
+    background: url(/views/img/news_r.png) no-repeat;
+}
+
+#news-link li {
+    float: left;
+    width: 101px;
+    height: 29px;
+    text-align: center;
+}
+
+.indexbox {
+    width: 100%;
+    height: 260px;
+}
+
+#game-box {
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+#game-box li {
+    float: left;
+    vertical-align: top;
+}
+
+#game-box li[data-img="01"] a {
+    background: url(/views/img/01.png) no-repeat center top;
+}
+
+#game-box li[data-img="02"] a {
+    background: url(/views/img/02.png) no-repeat center top;
+}
+
+#game-box li[data-img="03"] a {
+    background: url(/views/img/03.png) no-repeat center top;
+}
+
+#game-box li[data-img="04"] a {
+    background: url(/views/img/04.png) no-repeat center top;
+}
+
+#game-box a {
+    display: inline-block;
+    width: 250px;
+    height: 245px;
+}
+
+#game-box li a:hover {
+    background-position: center bottom;
+}
+
+.first_news_box marquee {
+    color: #fff9bd;
+    font-size: 12px;
+    line-height: 50px;
+    width: 635px;
+    height: 66px;
+    margin-left: 120px;
+}
+
+/*轮播图*/
+.indexbanner {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    width: 1000px;
+}
+
+.gongao {
+    width: 1000px;
+    height: 43px;
+    line-height: 43px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #37251e;
+    font-size: 12px;
+    background: url(/views/img/notebg.png) no-repeat bottom center;
+}
+
+.gongao h2 {
+    color: #37251e;
+    display: block;
+    width: 150px;
+    height: 43px;
+    line-height: 43px;
+    float: left;
+    font-size: 14px;
+    text-align: right;
+    font-weight: bold;
+    font-family: "微软雅黑";
+}
+
+.gongao .scroll_div {
+    width: 780px;
+    height: 43px;
+    line-height: 43px;
+    float: left;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #37251e;
+}
+
+/*轮播图 end*/
+
+.gamebg {
+    width: 100%;
+    height: 246px;
+    background: url(/views/img/index_contentbg.jpg) no-repeat top center;
+    padding: 30px 0;
+}
+
+.gamebg .gamelist {
+    width: 1000px;
+    height: 247px;
+    margin: 0 auto;
+}
+
+.gamebg .gamelist div.list {
+    width: 248px;
+    height: 247px;
+    float: left;
+    margin: 0 1px;
+    position: relative;
+}
+
+.gamebg .gamelist div.list a {
+    color: #f6ca89;
+    cursor: pointer;
+}
+
+.gamebg .gamelist dl {
+    display: block;
+    width: 248px;
+    height: 247px;
+    background: url(/views/img/game_iconbg.png) no-repeat top center;
+    position: relative;
+}
+
+.gamebg .gamelist dl:hover {
+    background: url(/views/img/game_iconbg_h.gif) no-repeat top center;
+}
+
+.gamebg .gamelist dl:hover .note {
+    color: #000 !important;
+}
+
+
+.gamebg .gamelist dl dt {
+    display: block;
+    width: 215px;
+    height: 106px;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 2;
+}
+
+.gamebg .gamelist dl dd {
+    display: block;
+    width: 180px;
+    overflow: hidden;
+    z-index: 2;
+    position: absolute;
+    top: 170px;
+    left: 34px;
+    text-align: justify;
+    font-family: "微软雅黑";
+    font-size: 12px;
+    line-height: 150%;
+}
+
+.gamebg .gamelist dl dd.title {
+    top: 130px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    height: 30px;
+}
+
+.gamebg .gamelist dl dd.title span.gametitle {
+    display: block;
+    width: 180px;
+    height: 30px;
+    text-align: center;
+    color: #f6ca89;
+    text-indent: -9999px;
+    padding: 0;
+}
+
+.gamebg .gamelist .list01 dl dd.title .down span.gametitle {
+    background: url(/views/img/game_title01.png) no-repeat center center;
+}
+
+.gamebg .gamelist .list01 dl:hover dd.title .down span.gametitle {
+    background: url(/views/img/game_title01_h.png) no-repeat top center;
+}
+
+.gamebg .gamelist .list02 dl dd.title .down span.gametitle {
+    background: url(/views/img/game_title02.png) no-repeat center center;
+}
+
+.gamebg .gamelist .list02 dl:hover dd.title .down span.gametitle {
+    background: url(/views/img/game_title02_h.png) no-repeat top center;
+}
+
+.gamebg .gamelist .list03 dl dd.title .down span.gametitle {
+    background: url(/views/img/game_title03.png) no-repeat center center;
+}
+
+.gamebg .gamelist .list03 dl:hover dd.title .down span.gametitle {
+    background: url(/views/img/game_title03_h.png) no-repeat top center;
+}
+
+.gamebg .gamelist .list04 dl dd.title .down span.gametitle {
+    background: url(/views/img/game_title04.png) no-repeat center center;
+}
+
+.gamebg .gamelist .list04 dl:hover dd.title .down span.gametitle {
+    background: url(/views/img/game_title04_h.png) no-repeat top center;
+}
+
+.gamebg .gamelist .list04 dl:hover dd.title .down span.gametitle {
+    background: url(/views/img/game_title04_h.png) no-repeat top center;
+}
+
+
+.gamebg .gamelist dl dd.changebg {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: url(/views/img/game_iconbg_h.gif) no-repeat top center;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}

@@ -1,0 +1,101 @@
+
+.banner-wrapper
+{
+    height: 346px;
+    background: url("/views/img/title_welcome.jpg") center;
+}
+
+#Game-Menual .Game-Menual-box {
+    margin-top: 50px;
+}
+
+.main-wrapper {
+    width: 100%;
+    height: auto;
+    min-height: 600px;
+    overflow: hidden
+}
+
+.main-wrapper .content-wrapper {
+    width:1000px;
+    height: auto;
+    margin: 10px auto;
+    overflow: hidden;
+    border: 1px #442312 solid;
+    background: #30241c url(/views/img/contentmainbg.png) no-repeat top center;
+    -webkit-box-shadow: 0 0 20px #000;
+    margin-top:0px;
+    padding:23px 20px 23px 20px;
+}
+
+.main-wrapper .content-wrapper .right-wrapper {
+    float: right;
+    width:760px;
+    min-height: 375px;
+}
+
+.main-wrapper .content-wrapper .right-wrapper .line-wrapper {
+    width: 100%;
+    height: auto;
+    padding-top: 150px;
+    background: url('/views/img/bj2.png') no-repeat scroll center top rgba(0, 0, 0, 0)
+}
+
+.main-wrapper .content-wrapper .right-wrapper .line-wrapper .line-list {
+    width: 500px;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden
+}
+
+.main-wrapper .content-wrapper .right-wrapper .line-wrapper .line-list li {
+    width: 100%;
+    height: 33px;
+    padding: 2px 0;
+    line-height: 38px;
+    overflow: hidden
+}
+
+.main-wrapper .content-wrapper .right-wrapper .line-wrapper .line-list li span {
+    display: inline-block;
+    float: left;
+    line-height: 29px;
+    text-align: center;
+    color: #fff
+}
+
+.main-wrapper .content-wrapper .right-wrapper .line-wrapper .line-list li span:nth-child(1) {
+    width: 96px;
+    height: 29px;
+    margin-right: 6px;
+    background: url("/views/img/txt1.png") no-repeat center left
+}
+
+.main-wrapper .content-wrapper .right-wrapper .line-wrapper .line-list li span:nth-child(2) {
+    width: 50px;
+    height: 27px;
+    background: url("/views/img/li.png") no-repeat left center
+}
+
+.main-wrapper .content-wrapper .right-wrapper .line-wrapper .line-list li span:nth-child(3) {
+    height: 29px;
+    width: 233px;
+    font-size: 14px;
+    text-align: center;
+    background: url("/views/img/txt2.png") no-repeat center left
+}
+
+.main-wrapper .content-wrapper .right-wrapper .line-wrapper .line-list li a {
+    display: inline-block;
+    height: 31px;
+    width: 101px;
+    background: url("/views/img/btn1.png") no-repeat center
+}
+
+.main-wrapper .content-wrapper .right-wrapper .line-wrapper .line-list .reset {
+    display: block;
+    height: 53px;
+    width: 295px;
+    margin: 15px auto;
+    background: url("/views/img/btn2.png") no-repeat center
+}

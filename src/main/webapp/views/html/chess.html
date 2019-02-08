@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--#include virtual="/views/html/head.html"-->
+  <style>
+    .banner-wrapper
+    {
+      height: 346px;
+      background: url("/views/img/title_welcome.jpg") center;
+    }
+  </style>
+</head>
+<body>
+<!--#include virtual="/views/html/header.html"-->
+<div id="center">
+
+  <div style="clear:both;"></div>
+  <div class="main-wrapper">
+    <!--#include virtual="/page/cardGame/cardGame.html"-->
+  </div>
+</div>
+<!--#include virtual="/views/html/footer.html"-->
+<script type="text/javascript">
+  $(".LS-chess").addClass('current').siblings().removeClass('current');
+</script>
+</body>
+</html>

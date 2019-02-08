@@ -1,0 +1,59 @@
+{
+    "cus_model_nav":[
+    
+    {
+          "modelName": "模板一",
+          "modelId": "1"
+        },
+
+    {
+          "modelName": "模板二",
+          "modelId": "2"
+        },
+
+    {
+          "modelName": "模板三",
+          "modelId": "3"
+        },
+
+    {
+          "modelName": "模板四",
+          "modelId": "4"
+        },
+
+    {
+          "modelName": "模板五",
+          "modelId": "5"
+        },
+
+    {
+          "modelName": "模板六",
+          "modelId": "6"
+        },
+
+        {
+          "modelName": "模板七",
+          "modelId": "7"
+        }
+    ],
+    "cus_model_next":[
+        {
+            "modelName": "游艺一",
+            "appId": "1",
+            "appLink": "www.baidu.com",
+            "appImg": "/views/image/20181108/20181108163957561962-chat.png"
+        },
+        {
+            "modelName": "游艺二",
+            "appId": "2",
+            "appLink": "www.baidu.com",
+            "appImg": "/views/image/20181108/20181108163957561962-chat.png"
+        },
+        {
+            "modelName": "游艺三",
+            "appId": "3",
+            "appLink": "www.baidu.com",
+            "appImg": "/views/image/20181108/20181108163957561962-chat.png"
+        }
+    ]
+}

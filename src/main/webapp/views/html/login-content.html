@@ -1,0 +1,39 @@
+<script>
+  $(".login-key").remove();
+</script>
+<div class="login-wraped">
+  <div class="login-content">
+    <div class="res-wrap">
+      <fieldset>
+        <legend>用户登录</legend>
+        <div class="reg-info" id="_form_login" onkeydown="KeyDown();">
+          <ul style="margin-top: 10px;">
+            <li>
+              <div class="info-left"><span class="red">* </span>用户名：</div>
+              <div class="info-right"><input class="reg-int" type="text" id="username" placeholder="请输入用户名"></div>
+              <div class="info-txt">请输入用户名（4-11位英文、数字，以字母开头）</div>
+            </li>
+            <li>
+              <div class="info-left"><span class="red">* </span>密码：</div>
+              <div class="info-right"><input class="reg-int" id="password" type="password" placeholder="请输入密码"></div>
+              <div class="info-txt"><a onclick="openForgetPwd()" style="cursor: pointer;margin-left: -15px;height:  35px;line-height:  35px;margin-top: 4px;background: none;">忘记密码？</a></div>
+            </li>
+            <li id="vcode_moudle">
+              <div class="info-left"><span class="red">* </span>验证码：</div>
+              <div class="info-right info-codes">
+                <input type="hidden" id="needVocde" value="">
+                <input class="codes-int" name="authnum" type="text" id="rmNum" maxlength="4" placeholder="请输入验证码">
+                <img class="makecodePic" id="vImg" onclick="getYzm()" src="/views/img/code.png"
+                     title="重新获取验证码">
+              </div>
+            </li>
+            <li>
+              <a href="javascript:;" onclick="aLeftForm1Sub();" class="submit">登录</a>
+              <a href="/views/html/register.html" class="reg-btn">注册</a>
+            </li>
+          </ul>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+</div>

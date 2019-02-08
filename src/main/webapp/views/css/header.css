@@ -1,0 +1,372 @@
+﻿.clear {
+    clear: both;
+}
+.red
+{
+    color:red;
+}
+
+/*头部*/
+header {
+    width: 100%;
+    height: 151px;
+    background: url(/views/img/headerbg.gif) no-repeat top center;
+    position: absolute;
+    top: 0px;
+    z-index: 10000;
+}
+
+header .header-content {
+    position: relative;
+    width: 1000px;
+    height: 107px;
+    margin: 0 auto;
+    overflow: hidden
+}
+
+header .header-content .logo-wrapper {
+    float: left;
+    width: 300px;
+    height: 107px;
+    overflow: hidden;
+}
+
+#headright {
+    width: 700px;
+    float: left;
+}
+
+#headright .logo-text {
+    float: left;
+    width: 201px;
+    height: 44px;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
+#headright .top_select {
+    display: inline-block;
+    height: auto;
+    width: 100%;
+}
+
+#nowTime {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    color: #fff;
+    word-spacing: 8px;
+    position: relative;
+}
+
+.top_select span {
+    float: left;
+    color: #fff;
+    line-height: 30px;
+    margin-left: 10px;
+}
+
+.top_select .colect {
+    background: url('/views/img/langs.png') no-repeat right bottom;
+    float: right;
+    color: #fff;
+    height: 26px;
+    line-height: 36px;
+    margin-top: 10px;
+    padding-right: 80px;
+    font-size: 12px;
+    text-align: right;
+}
+
+.top_select .colect a {
+    line-height: 25px;
+    color: #fff;
+    margin-left: 10px;
+}
+
+.top_select .colect a:hover {
+    text-decoration: underline;
+}
+
+/*登录框*/
+#headright .login-key {
+    width: 700px;
+    height: 48px;
+    float: right;
+    position: relative;
+}
+
+.user {
+    background: none;
+    border: none;
+}
+
+.user-identifying-code {
+    position: relative;
+}
+
+.user-identifying-code img {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 45px;
+    height: 21px;
+}
+
+.key-wrap {
+    float: right;
+}
+
+.key-wrap span {
+    float: left;
+}
+
+.key-wrap .logininfo {
+    color: #f6ca89;
+    width: 76px;
+    height: 31px;
+    line-height: 31px;
+    text-align: right;
+    font-size: 14px;
+    margin-top: -3px;
+}
+
+.key-wrap .logincolor:hover {
+    color: #fff;
+}
+
+.key-wrap .user-name, .key-wrap .password, .user-identifying-code {
+    display: block;
+    width: 100px;
+    height: 25px;
+    margin: 0 5px 4px 0;
+    text-indent: 6px;
+    color: #f6ca89;
+    border: 1px solid #83664a;
+    background: #4d3a2a;
+    border-radius: 5px;
+}
+
+.key-wrap .user-name input, .key-wrap .password input, .user-identifying-code input {
+    display: block;
+    width: 100px;
+    height: 25px;
+    margin: 0 5px 4px 0;
+    text-indent: 6px;
+    color: #f6ca89;
+    border: 1px solid #83664a;
+    background: #4d3a2a;
+    border-radius: 5px;
+}
+
+.dr_anniu {
+    width: 68px;
+    height: 29px;
+    cursor: pointer;
+    background: url(/views/img/bt_login.png) no-repeat;
+    border: none;
+    margin-right: 5px;
+    margin-top: -2px;
+    float: left;
+}
+
+.dr_anniu:hover {
+    background: url(/views/img/bt_login_h.png) no-repeat;
+}
+
+.user-enter .register-btn {
+    width: 60px;
+    height: 27px;
+    background: url(/views/img/bt_register.png) no-repeat;
+    cursor: pointer;
+    display: block;
+    float: left;
+    margin-top: -1px;
+}
+
+.user-enter .register-btn:hover {
+    background: url(/views/img/bt_register.png) no-repeat;
+    text-decoration: none;
+    filter: alpha(opacity=90);
+    -moz-opacity: 0.9;
+    -khtml-opacity: 0.9;
+    opacity: 0.9;
+}
+
+/*导航菜单*/
+
+#L-Menual {
+    width: 1050px;
+    margin: 0 auto;
+    height: 44px;
+    zoom: 1;
+}
+
+.nav {
+    margin: 0;
+    padding-left: 3px;
+    height: 35px;
+    line-height: 35px;
+    margin-top: 10px;
+}
+
+#L-Menual ul {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+#L-Menual ul li {
+    float: left;
+    display: inline;
+    width: 104px;
+    height: 44px;
+}
+
+#L-Menual ul li.move {
+    width: 100px;
+    height: 44px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(/views/img/nav_h.jpg) no-repeat center center;
+    z-index: -10;
+}
+
+#L-Menual ul li a {
+    margin: 0 auto;
+    width: 104px;
+    height: 44px;
+    line-height: 44px;
+    background: url(/views/img/navli.png) no-repeat right center;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: #fff5bc;
+    font-weight: bold;
+    overflow: hidden;
+    font-size: 14px;
+    font-family: '微软雅黑';
+}
+
+#L-Menual ul li a:hover, #L-Menual ul li.current a {
+    background: url(/views/img/nav_h.jpg) no-repeat center center;
+    width: 100px;
+}
+
+#L-Menual .hot {
+    background: url(/views/img/hot.gif) no-repeat left;
+    width: 21px;
+    height: 13px;
+    float: right;
+    position:  absolute;
+}
+
+/*二级菜单*/
+
+#L-Sub {
+    position: relative;
+    z-index: 9999;
+    clear: both;
+}
+
+#L-Sub .LS-chess
+{
+    left:185px !important;;
+}
+
+#L-Sub .LS-live
+{
+    left:300px !important;;
+}
+#L-Sub .LS-ball
+{
+    left:500px !important;;
+}
+#L-Sub div {
+    display: none;
+    position: absolute;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 8px;
+    z-index: 100;
+}
+
+#L-Sub div a {
+    float: left;
+    display: block;
+    background: url(/views/img/sub.gif) 32px repeat-x;
+    padding: 0 4px;
+    color: #FFFFE4;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+#L-Sub div a:hover {
+    color: #F2E1B0;
+}
+
+#L-Sub span {
+    display: block;
+    float: left;
+    width: 7px;
+    height: 32px;
+}
+
+#L-Sub span.subbg-left {
+    background: url(/views/img/sub.gif) no-repeat;
+}
+
+#L-Sub span.subbg-right {
+    background: url(/views/img/sub.gif) no-repeat left bottom;
+}
+
+/*红包*/
+.red-pack {
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    width: 200px;
+    height: 200px
+}
+
+.red-pack a {
+    display: block;
+    width: 190px;
+    height: 190px;
+    margin-top: 10px;
+    background-size: 75% 100%
+}
+
+.red-pack b {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    line-height: 17px;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 18px;
+    background: #fff;
+    cursor: pointer
+}
+#center {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    background: #30241c url(/views/img/contentbg.jpg) no-repeat top center;
+    padding-bottom: 10px;
+    overflow: hidden;
+}
+.main-content {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    background: #30241c url(/views/img/contentmainbg.png) no-repeat top center;
+    padding-bottom: 10px;
+    overflow: hidden;
+}

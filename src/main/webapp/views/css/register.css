@@ -1,0 +1,216 @@
+.banner-wrapper {
+    width: 100%;
+    height: 346px;
+    background: url("/views/img/title_welcome.jpg") center;
+}
+.main-wrapper {
+    width: 100%;
+    min-height: 400px;
+    height: auto;
+    margin: 10px 0;
+    overflow: hidden
+}
+
+.main-wrapper .main-content {
+    width:1000px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.main-wrapper .main-content .right-wrapper {
+    float: right;
+    width:765px;
+    min-height: 375px;
+    padding-bottom: 20px;
+    border-radius: 3px
+}
+
+.main-wrapper .main-content .right-wrapper .JoinMemForm {
+    width:765px;
+    height: auto;
+    overflow: hidden
+}
+
+.main-wrapper .main-content .right-wrapper .JoinMemForm .text {
+    margin: 10px;
+    padding: 10px;
+    line-height: 25px;
+    color: #ffa500
+}
+
+.main-wrapper .main-content .right-wrapper .JoinMemForm fieldset {
+    margin: 10px;
+}
+
+.main-wrapper .main-content .right-wrapper .JoinMemForm fieldset legend {
+    font-weight: bold;
+    color: yellow
+}
+
+.main-wrapper .main-content .right-wrapper .JoinMemForm fieldset li {
+    height: 35px;
+    line-height: 35px;
+    color: #f8e678;
+    border-right: solid 2px #9b836f;
+    border-left: solid 2px #9b836f;
+    margin-left: 15px;
+    position: relative;
+    width: 731px;
+}
+.main-wrapper .main-content .right-wrapper .JoinMemForm fieldset li div {
+    float: left;
+    height: 27px;
+    line-height: 27px;
+    margin-right: 5px
+}
+
+.main-wrapper .main-content .right-wrapper .JoinMemForm fieldset li div:nth-child(1) {
+    width: 135px;
+    text-align: right
+}
+
+.main-wrapper .main-content .right-wrapper .JoinMemForm fieldset li div input[type="text"], .main-wrapper .main-content .right-wrapper .JoinMemForm fieldset li div input[type="password"] {
+    height: 27px;
+    padding: 0 0 0 25px;
+    line-height: 27px;
+    border: none;
+    border-radius: 3px;
+    /*box-shadow: 0 0 6px #3a3a3a;*/
+    outline: 0;
+}
+
+.main-wrapper .main-content .right-wrapper .JoinMemForm fieldset li div select {
+    width: 41px;
+    height: 20px;
+    padding: 0 5px;
+    line-height: 20px;
+    border: 1px solid #666;
+    border-radius: 3px;
+    box-shadow: 0 0 6px #3a3a3a;
+    outline: 0
+}
+
+.main-wrapper .main-content .right-wrapper .JoinMemForm p {
+    width: 100%;
+    height: 20px;
+    line-height: 25px;
+    padding-left:28px;
+    color: #fff
+}
+
+.main-wrapper .main-content .right-wrapper .JoinMemForm p input {
+    float: left;
+    margin-top: 7px
+}
+
+.main-wrapper .main-content .right-wrapper .JoinMemForm p a {
+    color: red
+}
+
+.main-wrapper .main-content .right-wrapper .JoinMemForm .btn-wrapper {
+    width: 100%;
+    padding-left: 10px;
+    font-size: 14px;
+    color: #fff
+}
+
+.main-wrapper .main-content .right-wrapper .JoinMemForm .btn-wrapper p input[type="checkbox"] {
+    float: left;
+    margin: 1.5px 6px 0 0
+}
+
+.main-wrapper .main-content .right-wrapper .JoinMemForm .btn-wrapper p a {
+    color: red
+}
+
+.main-wrapper .main-content .right-wrapper .JoinMemForm .btn-wrapper div {
+    width: 100%;
+    margin: 30px 0 20px;
+    text-align: center
+}
+
+.main-wrapper .main-content .right-wrapper .JoinMemForm .btn-wrapper div input {
+    width: 72px;
+    height: 27px;
+    margin-left: 4px;
+    margin-bottom: 4px;
+    line-height: 27px;
+    font-size: 13px;
+    text-align: center;
+    background: #f13c3c;
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+    outline: 0
+}
+
+.main-wrapper .main-content .right-wrapper .mark-wrapper {
+    width:90%;
+    padding-left:25px;
+    font-size: 14px;
+    color: #fff
+}
+
+.main-wrapper .main-content .right-wrapper .mark-wrapper h3 {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-weight: 400;
+    margin-bottom: 10px
+}
+
+.main-wrapper .main-content .right-wrapper .mark-wrapper ol {
+    margin-top: 10px
+}
+
+.main-wrapper .main-content .right-wrapper .mark-wrapper ol li {
+    padding-left: 20px;
+    margin: 12px 0;
+    line-height: 20px
+}
+.submitDiv input {
+    background: url(/views/img/reg_input.png) no-repeat 0px -84px;
+    margin: 0px;
+    width: 172px;
+    vertical-align: middle;
+}
+#reg_form_1 h2{
+    font-weight: bold;
+    color: #FF0;
+    padding-left: 39px;
+    background: url(/views/img/reg_border_top.png) no-repeat 15px bottom;
+    height: 20px;
+    line-height: 15px;
+    width: 725px;
+    font-size:12px;
+}
+.reg_bottom {
+    background: url(/views/img/reg_border_bottom.png) no-repeat;
+    height: 15px;
+    border:none 0px;
+    width: 735px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    padding-left: 0px;
+}
+.info-right input{
+    background: url(/views/img/reg_input.png) no-repeat 0px -84px;
+    /*background:#FFFFFF;*/
+    margin: 0px;
+    padding: 3px;
+    height: 27px;
+    width:172px;
+    border:none 0px;
+    line-height: 27px;
+    vertical-align: middle;
+}
+#account{
+    background: url(/views/img/reg_input.png) no-repeat 0px 0px;
+}
+#passwd{
+    background: url(/views/img/reg_input.png) no-repeat 0px -29px;
+}
+#confirmPassword{
+    background: url(/views/img/reg_input.png) no-repeat 0px -56px;
+}

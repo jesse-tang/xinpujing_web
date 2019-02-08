@@ -1,0 +1,39 @@
+.form .form-group > label {
+  width: 128px;
+}
+
+.form .form-group > label, .form .form-group > div {
+  float: left;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.form .form-group > div > .form-control, .form .form-group > div > .input-group, .form .form-group > div > .form-control-static {
+  width: 216px;
+}
+
+.form .form-group > div.lg > .form-control, .form .form-group > div.lg > .input-group, .form .form-group > div.lg > .form-control-static {
+  width: 432px;
+}
+
+.form .form-group > div.sm > .form-control, .form .form-group > div.sm > .input-group, .form .form-group > div.sm > .form-control-static {
+  width: 124px;
+}
+
+.form .form-group > div.auto > .form-control, .form .form-group > div.auto > .input-group, .form .form-group > div.auto > .form-control-static {
+  width: auto;
+}
+
+.form .btn {
+  width: 96px;
+}
+
+.form .btn.lg {
+  width: 216px;
+}
+
+.form .btn:first-child {
+  margin-left: 128px;
+}
