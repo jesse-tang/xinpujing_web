@@ -142,15 +142,15 @@
 		<url-pattern>*.ico</url-pattern>
 	</servlet-mapping>
 
-	<!--<servlet> -->
-		<!--<servlet-name>SSIServlet</servlet-name> -->
-		<!--<servlet-class>com.caucho.servlets.ssi.SSIServlet</servlet-class> -->
-	<!--</servlet> -->
-	<!--<servlet-mapping> -->
-		<!--<servlet-name>SSIServlet</servlet-name> -->
-		<!--<url-pattern>*.shtml</url-pattern> -->
-		<!--<url-pattern>*.html</url-pattern> -->
-		<!--<url-pattern>*.inc</url-pattern> -->
-	<!--</servlet-mapping> -->
+	<!--<servlet>-->
+		<!--<servlet-name>SSIServlet</servlet-name>-->
+		<!--<servlet-class>com.caucho.servlets.ssi.SSIServlet</servlet-class>-->
+	<!--</servlet>-->
+	<!--<servlet-mapping>-->
+		<!--<servlet-name>SSIServlet</servlet-name>-->
+		<!--<url-pattern>*.shtml</url-pattern>-->
+		<!--<url-pattern>*.html</url-pattern>-->
+		<!--<url-pattern>*.inc</url-pattern>-->
+	<!--</servlet-mapping>-->
 
 </web-app>
