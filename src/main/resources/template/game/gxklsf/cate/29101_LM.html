@@ -1,0 +1,465 @@
+<!--#include virtual="/page/game/include/bar-bet.html"-->
+<div class="table  table-bet  redTable data-betArea">
+<!-- 总和-龙虎和 -->
+<table class="table table-bordered table-bet">
+    <thead>
+        <tr>
+            <th colspan="12" class="r_title_first">总和</th>
+        </tr>
+        <tr>
+            <th colspan="3" class=""><div class="clear r_title_sencord">
+                <div class="clear">
+                    <span class="border_001">号码</span>
+                    <span class="border_002" >赔率</span>
+                    <span class="border_003">金额</span><i></i>
+                </div>
+            </div></th>
+            <th colspan="3" class=""><div class="clear r_title_sencord">
+                <div class="clear">
+                    <span class="border_001">号码</span>
+                    <span class="border_002" >赔率</span>
+                    <span class="border_003">金额</span><i></i>
+                </div>
+            </div></th>
+            <th colspan="3" class=""><div class="clear r_title_sencord">
+                <div class="clear">
+                    <span class="border_001">号码</span>
+                    <span class="border_002" >赔率</span>
+                    <span class="border_003">金额</span><i></i>
+                </div>
+            </div></th>
+            <th colspan="3" class=""><div class="clear r_title_sencord">
+                <div class="clear">
+                    <span class="border_001">号码</span>
+                    <span class="border_002" >赔率</span>
+                    <span class="border_003">金额</span><i></i>
+                </div>
+            </div></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        	<#assign playList= playMap["29102102"] />
+        	<#list playList as play>
+            <td class="data-focus-${play.id?c} data-focus t_lh_border1" data-playId="${play.id?c}">${play.alias}</td>
+            <td class="data-focus-${play.id?c} data-focus t_lh_border2" data-playId="${play.id?c}"><b class="text-danger data-block" data-playId="${play.id?c}"></b></td>
+            <td class="data-focus-${play.id?c} t_lh_border3" data-playId="${play.id?c}">
+                <input type="text" id="${play.id?c}" class="bet-input data-bet" data-playId="${play.id?c}" data-code="${play.code}" data-cateName="${play.cateName}" data-value="${play.value}">
+            </td>
+            </#list>
+            <#assign playList= playMap["29102103"] />
+        	<#list playList as play>
+            <td class="data-focus-${play.id?c} data-focus t_lh_border1" data-playId="${play.id?c}">${play.alias}</td>
+            <td class="data-focus-${play.id?c} data-focus t_lh_border2" data-playId="${play.id?c}"><b class="text-danger data-block" data-playId="${play.id?c}"></b></td>
+            <td class="data-focus-${play.id?c} t_lh_border3" data-playId="${play.id?c}">
+                <input type="text" id="${play.id?c}" class="bet-input data-bet" data-playId="${play.id?c}" data-code="${play.code}" data-cateName="${play.cateName}" data-value="${play.value}">
+            </td>
+            </#list>
+        </tr>
+    </tbody>
+</table>
+
+<table class="table table-bordered table-bet pull-left w20">
+    <thead>
+        <tr>
+            <th colspan="3" class="r_title_first">特码</th>
+        </tr>
+         <tr>
+            <th colspan="3" class=""><div class="clear r_title_sencord">
+                <div class="clear">
+                    <span class="border_001">号码</span>
+                    <span class="border_002" >赔率</span>
+                    <span class="border_003">金额</span><i></i>
+                </div>
+            </div></th>
+        </tr>
+    </thead>
+    <tbody>
+        <#assign playList= playMap["29101101102"] />
+       	<#list playList as play>
+	       	<tr>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border1" data-playId="${play.id?c}">${play.alias}</td>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border2" data-playId="${play.id?c}"><b class="text-danger data-block" data-playId="${play.id?c}"></b></td>
+	        <td class="data-focus-${play.id?c} t_lh_border3" data-playId="${play.id?c}">
+	            <input type="text" id="${play.id?c}" class="bet-input data-bet" data-playId="${play.id?c}" data-code="${play.code}" data-cateName="${play.cateName}" data-value="${play.value}">
+	        </td>
+	        </tr>
+        </#list>
+        <#assign playList= playMap["29101101103"] />
+       	<#list playList as play>
+	       	<tr>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border1" data-playId="${play.id?c}">${play.alias}</td>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border2" data-playId="${play.id?c}"><b class="text-danger data-block" data-playId="${play.id?c}"></b></td>
+	        <td class="data-focus-${play.id?c} t_lh_border3" data-playId="${play.id?c}">
+	            <input type="text" id="${play.id?c}" class="bet-input data-bet" data-playId="${play.id?c}" data-code="${play.code}" data-cateName="${play.cateName}" data-value="${play.value}">
+	        </td>
+	        </tr>
+        </#list>
+        <#assign playList= playMap["29101101104"] />
+       	<#list playList as play>
+	       	<tr>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border1" data-playId="${play.id?c}">${play.alias}</td>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border2" data-playId="${play.id?c}"><b class="text-danger data-block" data-playId="${play.id?c}"></b></td>
+	        <td class="data-focus-${play.id?c} t_lh_border3" data-playId="${play.id?c}">
+	            <input type="text" id="${play.id?c}" class="bet-input data-bet" data-playId="${play.id?c}" data-code="${play.code}" data-cateName="${play.cateName}" data-value="${play.value}">
+	        </td>
+	        </tr>
+        </#list>
+        <#assign playList= playMap["29101101105"] />
+       	<#list playList as play>
+	       	<tr>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border1" data-playId="${play.id?c}">${play.alias}</td>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border2" data-playId="${play.id?c}"><b class="text-danger data-block" data-playId="${play.id?c}"></b></td>
+	        <td class="data-focus-${play.id?c} t_lh_border3" data-playId="${play.id?c}">
+	            <input type="text" id="${play.id?c}" class="bet-input data-bet" data-playId="${play.id?c}" data-code="${play.code}" data-cateName="${play.cateName}" data-value="${play.value}">
+	        </td>
+	        </tr>
+        </#list>
+        <#assign playList= playMap["29101101106"] />
+       	<#list playList as play>
+	       	<tr>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border1" data-playId="${play.id?c}">${play.alias}</td>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border2" data-playId="${play.id?c}"><b class="text-danger data-block" data-playId="${play.id?c}"></b></td>
+	        <td class="data-focus-${play.id?c} t_lh_border3" data-playId="${play.id?c}">
+	            <input type="text" id="${play.id?c}" class="bet-input data-bet" data-playId="${play.id?c}" data-code="${play.code}" data-cateName="${play.cateName}" data-value="${play.value}">
+	        </td>
+	        </tr>
+        </#list>
+        <#assign playList= playMap["29101101107"] />
+       	<#list playList as play>
+	       	<tr>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border1" data-playId="${play.id?c}">${play.alias}</td>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border2" data-playId="${play.id?c}"><b class="text-danger data-block" data-playId="${play.id?c}"></b></td>
+	        <td class="data-focus-${play.id?c} t_lh_border3" data-playId="${play.id?c}">
+	            <input type="text" id="${play.id?c}" class="bet-input data-bet" data-playId="${play.id?c}" data-code="${play.code}" data-cateName="${play.cateName}" data-value="${play.value}">
+	        </td>
+	        </tr>
+        </#list>
+    </tbody>
+</table>
+
+<table class="table table-bordered table-bet pull-left w20">
+    <thead>
+        <tr>
+            <th colspan="3" class="r_title_first">正码一</th>
+        </tr>
+         <tr>
+            <th colspan="3" class=""><div class="clear r_title_sencord">
+                <div class="clear">
+                    <span class="border_001">号码</span>
+                    <span class="border_002" >赔率</span>
+                    <span class="border_003">金额</span><i></i>
+                </div>
+            </div></th>
+        </tr>
+    </thead>
+    <tbody>
+        <#assign playList= playMap["29101102102"] />
+       	<#list playList as play>
+	       	<tr>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border1" data-playId="${play.id?c}">${play.alias}</td>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border2" data-playId="${play.id?c}"><b class="text-danger data-block" data-playId="${play.id?c}"></b></td>
+	        <td class="data-focus-${play.id?c} t_lh_border3" data-playId="${play.id?c}">
+	            <input type="text" id="${play.id?c}" class="bet-input data-bet" data-playId="${play.id?c}" data-code="${play.code}" data-cateName="${play.cateName}" data-value="${play.value}">
+	        </td>
+	        </tr>
+        </#list>
+        <#assign playList= playMap["29101102103"] />
+       	<#list playList as play>
+	       	<tr>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border1" data-playId="${play.id?c}">${play.alias}</td>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border2" data-playId="${play.id?c}"><b class="text-danger data-block" data-playId="${play.id?c}"></b></td>
+	        <td class="data-focus-${play.id?c} t_lh_border3" data-playId="${play.id?c}">
+	            <input type="text" id="${play.id?c}" class="bet-input data-bet" data-playId="${play.id?c}" data-code="${play.code}" data-cateName="${play.cateName}" data-value="${play.value}">
+	        </td>
+	        </tr>
+        </#list>
+        <#assign playList= playMap["29101102104"] />
+       	<#list playList as play>
+	       	<tr>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border1" data-playId="${play.id?c}">${play.alias}</td>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border2" data-playId="${play.id?c}"><b class="text-danger data-block" data-playId="${play.id?c}"></b></td>
+	        <td class="data-focus-${play.id?c} t_lh_border3" data-playId="${play.id?c}">
+	            <input type="text" id="${play.id?c}" class="bet-input data-bet" data-playId="${play.id?c}" data-code="${play.code}" data-cateName="${play.cateName}" data-value="${play.value}">
+	        </td>
+	        </tr>
+        </#list>
+        <#assign playList= playMap["29101102105"] />
+       	<#list playList as play>
+	       	<tr>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border1" data-playId="${play.id?c}">${play.alias}</td>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border2" data-playId="${play.id?c}"><b class="text-danger data-block" data-playId="${play.id?c}"></b></td>
+	        <td class="data-focus-${play.id?c} t_lh_border3" data-playId="${play.id?c}">
+	            <input type="text" id="${play.id?c}" class="bet-input data-bet" data-playId="${play.id?c}" data-code="${play.code}" data-cateName="${play.cateName}" data-value="${play.value}">
+	        </td>
+	        </tr>
+        </#list>
+        <#assign playList= playMap["29101102106"] />
+       	<#list playList as play>
+	       	<tr>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border1" data-playId="${play.id?c}">${play.alias}</td>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border2" data-playId="${play.id?c}"><b class="text-danger data-block" data-playId="${play.id?c}"></b></td>
+	        <td class="data-focus-${play.id?c} t_lh_border3" data-playId="${play.id?c}">
+	            <input type="text" id="${play.id?c}" class="bet-input data-bet" data-playId="${play.id?c}" data-code="${play.code}" data-cateName="${play.cateName}" data-value="${play.value}">
+	        </td>
+	        </tr>
+        </#list>
+        <#assign playList= playMap["29101102107"] />
+       	<#list playList as play>
+	       	<tr>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border1" data-playId="${play.id?c}">${play.alias}</td>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border2" data-playId="${play.id?c}"><b class="text-danger data-block" data-playId="${play.id?c}"></b></td>
+	        <td class="data-focus-${play.id?c} t_lh_border3" data-playId="${play.id?c}">
+	            <input type="text" id="${play.id?c}" class="bet-input data-bet" data-playId="${play.id?c}" data-code="${play.code}" data-cateName="${play.cateName}" data-value="${play.value}">
+	        </td>
+	        </tr>
+        </#list>
+    </tbody>
+</table>
+
+<table class="table table-bordered table-bet pull-left w20">
+    <thead>
+        <tr>
+            <th colspan="3" class="r_title_first">正码二</th>
+        </tr>
+         <tr>
+            <th colspan="3" class=""><div class="clear r_title_sencord">
+                <div class="clear">
+                    <span class="border_001">号码</span>
+                    <span class="border_002" >赔率</span>
+                    <span class="border_003">金额</span><i></i>
+                </div>
+            </div></th>
+        </tr>
+    </thead>
+    <tbody>
+        <#assign playList= playMap["29101103102"] />
+       	<#list playList as play>
+	       	<tr>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border1" data-playId="${play.id?c}">${play.alias}</td>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border2" data-playId="${play.id?c}"><b class="text-danger data-block" data-playId="${play.id?c}"></b></td>
+	        <td class="data-focus-${play.id?c} t_lh_border3" data-playId="${play.id?c}">
+	            <input type="text" id="${play.id?c}" class="bet-input data-bet" data-playId="${play.id?c}" data-code="${play.code}" data-cateName="${play.cateName}" data-value="${play.value}">
+	        </td>
+	        </tr>
+        </#list>
+        <#assign playList= playMap["29101103103"] />
+       	<#list playList as play>
+	       	<tr>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border1" data-playId="${play.id?c}">${play.alias}</td>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border2" data-playId="${play.id?c}"><b class="text-danger data-block" data-playId="${play.id?c}"></b></td>
+	        <td class="data-focus-${play.id?c} t_lh_border3" data-playId="${play.id?c}">
+	            <input type="text" id="${play.id?c}" class="bet-input data-bet" data-playId="${play.id?c}" data-code="${play.code}" data-cateName="${play.cateName}" data-value="${play.value}">
+	        </td>
+	        </tr>
+        </#list>
+        <#assign playList= playMap["29101103104"] />
+       	<#list playList as play>
+	       	<tr>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border1" data-playId="${play.id?c}">${play.alias}</td>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border2" data-playId="${play.id?c}"><b class="text-danger data-block" data-playId="${play.id?c}"></b></td>
+	        <td class="data-focus-${play.id?c} t_lh_border3" data-playId="${play.id?c}">
+	            <input type="text" id="${play.id?c}" class="bet-input data-bet" data-playId="${play.id?c}" data-code="${play.code}" data-cateName="${play.cateName}" data-value="${play.value}">
+	        </td>
+	        </tr>
+        </#list>
+        <#assign playList= playMap["29101103105"] />
+       	<#list playList as play>
+	       	<tr>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border1" data-playId="${play.id?c}">${play.alias}</td>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border2" data-playId="${play.id?c}"><b class="text-danger data-block" data-playId="${play.id?c}"></b></td>
+	        <td class="data-focus-${play.id?c} t_lh_border3" data-playId="${play.id?c}">
+	            <input type="text" id="${play.id?c}" class="bet-input data-bet" data-playId="${play.id?c}" data-code="${play.code}" data-cateName="${play.cateName}" data-value="${play.value}">
+	        </td>
+	        </tr>
+        </#list>
+        <#assign playList= playMap["29101103106"] />
+       	<#list playList as play>
+	       	<tr>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border1" data-playId="${play.id?c}">${play.alias}</td>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border2" data-playId="${play.id?c}"><b class="text-danger data-block" data-playId="${play.id?c}"></b></td>
+	        <td class="data-focus-${play.id?c} t_lh_border3" data-playId="${play.id?c}">
+	            <input type="text" id="${play.id?c}" class="bet-input data-bet" data-playId="${play.id?c}" data-code="${play.code}" data-cateName="${play.cateName}" data-value="${play.value}">
+	        </td>
+	        </tr>
+        </#list>
+        <#assign playList= playMap["29101103107"] />
+       	<#list playList as play>
+	       	<tr>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border1" data-playId="${play.id?c}">${play.alias}</td>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border2" data-playId="${play.id?c}"><b class="text-danger data-block" data-playId="${play.id?c}"></b></td>
+	        <td class="data-focus-${play.id?c} t_lh_border3" data-playId="${play.id?c}">
+	            <input type="text" id="${play.id?c}" class="bet-input data-bet" data-playId="${play.id?c}" data-code="${play.code}" data-cateName="${play.cateName}" data-value="${play.value}">
+	        </td>
+	        </tr>
+        </#list>
+    </tbody>
+</table>
+
+<table class="table table-bordered table-bet pull-left w20">
+    <thead>
+        <tr>
+            <th colspan="3" class="r_title_first">正码三</th>
+        </tr>
+         <tr>
+            <th colspan="3" class=""><div class="clear r_title_sencord">
+                <div class="clear">
+                    <span class="border_001">号码</span>
+                    <span class="border_002" >赔率</span>
+                    <span class="border_003">金额</span><i></i>
+                </div>
+            </div></th>
+        </tr>
+    </thead>
+    <tbody>
+        <#assign playList= playMap["29101104102"] />
+       	<#list playList as play>
+	       	<tr>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border1" data-playId="${play.id?c}">${play.alias}</td>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border2" data-playId="${play.id?c}"><b class="text-danger data-block" data-playId="${play.id?c}"></b></td>
+	        <td class="data-focus-${play.id?c} t_lh_border3" data-playId="${play.id?c}">
+	            <input type="text" id="${play.id?c}" class="bet-input data-bet" data-playId="${play.id?c}" data-code="${play.code}" data-cateName="${play.cateName}" data-value="${play.value}">
+	        </td>
+	        </tr>
+        </#list>
+        <#assign playList= playMap["29101104103"] />
+       	<#list playList as play>
+	       	<tr>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border1" data-playId="${play.id?c}">${play.alias}</td>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border2" data-playId="${play.id?c}"><b class="text-danger data-block" data-playId="${play.id?c}"></b></td>
+	        <td class="data-focus-${play.id?c} t_lh_border3" data-playId="${play.id?c}">
+	            <input type="text" id="${play.id?c}" class="bet-input data-bet" data-playId="${play.id?c}" data-code="${play.code}" data-cateName="${play.cateName}" data-value="${play.value}">
+	        </td>
+	        </tr>
+        </#list>
+        <#assign playList= playMap["29101104104"] />
+       	<#list playList as play>
+	       	<tr>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border1" data-playId="${play.id?c}">${play.alias}</td>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border2" data-playId="${play.id?c}"><b class="text-danger data-block" data-playId="${play.id?c}"></b></td>
+	        <td class="data-focus-${play.id?c} t_lh_border3" data-playId="${play.id?c}">
+	            <input type="text" id="${play.id?c}" class="bet-input data-bet" data-playId="${play.id?c}" data-code="${play.code}" data-cateName="${play.cateName}" data-value="${play.value}">
+	        </td>
+	        </tr>
+        </#list>
+        <#assign playList= playMap["29101104105"] />
+       	<#list playList as play>
+	       	<tr>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border1" data-playId="${play.id?c}">${play.alias}</td>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border2" data-playId="${play.id?c}"><b class="text-danger data-block" data-playId="${play.id?c}"></b></td>
+	        <td class="data-focus-${play.id?c} t_lh_border3" data-playId="${play.id?c}">
+	            <input type="text" id="${play.id?c}" class="bet-input data-bet" data-playId="${play.id?c}" data-code="${play.code}" data-cateName="${play.cateName}" data-value="${play.value}">
+	        </td>
+	        </tr>
+        </#list>
+        <#assign playList= playMap["29101104106"] />
+       	<#list playList as play>
+	       	<tr>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border1" data-playId="${play.id?c}">${play.alias}</td>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border2" data-playId="${play.id?c}"><b class="text-danger data-block" data-playId="${play.id?c}"></b></td>
+	        <td class="data-focus-${play.id?c} t_lh_border3" data-playId="${play.id?c}">
+	            <input type="text" id="${play.id?c}" class="bet-input data-bet" data-playId="${play.id?c}" data-code="${play.code}" data-cateName="${play.cateName}" data-value="${play.value}">
+	        </td>
+	        </tr>
+        </#list>
+        <#assign playList= playMap["29101104107"] />
+       	<#list playList as play>
+	       	<tr>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border1" data-playId="${play.id?c}">${play.alias}</td>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border2" data-playId="${play.id?c}"><b class="text-danger data-block" data-playId="${play.id?c}"></b></td>
+	        <td class="data-focus-${play.id?c} t_lh_border3" data-playId="${play.id?c}">
+	            <input type="text" id="${play.id?c}" class="bet-input data-bet" data-playId="${play.id?c}" data-code="${play.code}" data-cateName="${play.cateName}" data-value="${play.value}">
+	        </td>
+	        </tr>
+        </#list>
+    </tbody>
+</table>
+
+<table class="table table-bordered table-bet pull-left w20">
+    <thead>
+        <tr>
+            <th colspan="3" class="r_title_first">正码四</th>
+        </tr>
+         <tr>
+            <th colspan="3" class=""><div class="clear r_title_sencord">
+                <div class="clear">
+                    <span class="border_001">号码</span>
+                    <span class="border_002" >赔率</span>
+                    <span class="border_003">金额</span><i></i>
+                </div>
+            </div></th>
+        </tr>
+    </thead>
+    <tbody>
+        <#assign playList= playMap["29101105102"] />
+       	<#list playList as play>
+	       	<tr>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border1" data-playId="${play.id?c}">${play.alias}</td>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border2" data-playId="${play.id?c}"><b class="text-danger data-block" data-playId="${play.id?c}"></b></td>
+	        <td class="data-focus-${play.id?c} t_lh_border3" data-playId="${play.id?c}">
+	            <input type="text" id="${play.id?c}" class="bet-input data-bet" data-playId="${play.id?c}" data-code="${play.code}" data-cateName="${play.cateName}" data-value="${play.value}">
+	        </td>
+	        </tr>
+        </#list>
+        <#assign playList= playMap["29101105103"] />
+       	<#list playList as play>
+	       	<tr>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border1" data-playId="${play.id?c}">${play.alias}</td>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border2" data-playId="${play.id?c}"><b class="text-danger data-block" data-playId="${play.id?c}"></b></td>
+	        <td class="data-focus-${play.id?c} t_lh_border3" data-playId="${play.id?c}">
+	            <input type="text" id="${play.id?c}" class="bet-input data-bet" data-playId="${play.id?c}" data-code="${play.code}" data-cateName="${play.cateName}" data-value="${play.value}">
+	        </td>
+	        </tr>
+        </#list>
+        <#assign playList= playMap["29101105104"] />
+       	<#list playList as play>
+	       	<tr>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border1" data-playId="${play.id?c}">${play.alias}</td>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border2" data-playId="${play.id?c}"><b class="text-danger data-block" data-playId="${play.id?c}"></b></td>
+	        <td class="data-focus-${play.id?c} t_lh_border3" data-playId="${play.id?c}">
+	            <input type="text" id="${play.id?c}" class="bet-input data-bet" data-playId="${play.id?c}" data-code="${play.code}" data-cateName="${play.cateName}" data-value="${play.value}">
+	        </td>
+	        </tr>
+        </#list>
+        <#assign playList= playMap["29101105105"] />
+       	<#list playList as play>
+	       	<tr>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border1" data-playId="${play.id?c}">${play.alias}</td>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border2" data-playId="${play.id?c}"><b class="text-danger data-block" data-playId="${play.id?c}"></b></td>
+	        <td class="data-focus-${play.id?c} t_lh_border3" data-playId="${play.id?c}">
+	            <input type="text" id="${play.id?c}" class="bet-input data-bet" data-playId="${play.id?c}" data-code="${play.code}" data-cateName="${play.cateName}" data-value="${play.value}">
+	        </td>
+	        </tr>
+        </#list>
+        <#assign playList= playMap["29101105106"] />
+       	<#list playList as play>
+	       	<tr>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border1" data-playId="${play.id?c}">${play.alias}</td>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border2" data-playId="${play.id?c}"><b class="text-danger data-block" data-playId="${play.id?c}"></b></td>
+	        <td class="data-focus-${play.id?c} t_lh_border3" data-playId="${play.id?c}">
+	            <input type="text" id="${play.id?c}" class="bet-input data-bet" data-playId="${play.id?c}" data-code="${play.code}" data-cateName="${play.cateName}" data-value="${play.value}">
+	        </td>
+	        </tr>
+        </#list>
+        <#assign playList= playMap["29101105107"] />
+       	<#list playList as play>
+	       	<tr>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border1"  data-playId="${play.id?c}">${play.alias}</td>
+	        <td class="data-focus-${play.id?c} data-focus t_lh_border2" data-playId="${play.id?c}"><b class="text-danger data-block" data-playId="${play.id?c}"></b></td>
+	        <td class="data-focus-${play.id?c} t_lh_border3" data-playId="${play.id?c}">
+	            <input type="text" id="${play.id?c}" class="bet-input data-bet" data-playId="${play.id?c}" data-code="${play.code}" data-cateName="${play.cateName}" data-value="${play.value}">
+	        </td>
+	        </tr>
+        </#list>
+    </tbody>
+</table>
+</div>
+<!--#include virtual="/page/game/include/bar-bet.html"-->
+
+
+<script>
+    $(function () {
+        text.init();
+        lotteryManager.up({startCallback:gameManager.startCallback,stopCallback:gameManager.stopCallback});
+    })
+    </script>

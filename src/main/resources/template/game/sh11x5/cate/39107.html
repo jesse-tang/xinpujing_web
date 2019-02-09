@@ -1,0 +1,165 @@
+<!--#include virtual="/page/game/include/bar-bet.html"-->
+<#assign play_1= playMap["39107101"][0]/>
+<#assign play_2= playMap["39107102"][0]/>
+<#assign play_3= playMap["39107103"][0]/>
+<#assign play_5= playMap["39107105"][0]/>
+<#assign play_6= playMap["39107106"][0]/>
+<#assign play_7= playMap["39107107"][0]/>
+<#assign play_8= playMap["39107108"][0]/>
+<#assign play_9= playMap["39107109"][0]/>
+<#assign play_10= playMap["39107110"][0]/>
+
+<table class="table table-bordered table-bet">
+      <thead>
+        <tr>
+          <th class="r_title_first"><label><input type="radio" name="rtype" data-code="${play_1.code}" checked="checked" data-cateName="${play_1.cateName}" data-number="2">${play_1.cateName}</label></th>
+          <th class="r_title_first"><label><input type="radio" name="rtype" data-code="${play_2.code}" data-cateName="${play_2.cateName}" data-number="3">${play_2.cateName}</label></th>
+          <th class="r_title_first"><label><input type="radio" name="rtype" data-code="${play_3.code}" data-cateName="${play_3.cateName}" data-number="4">${play_3.cateName}</label></th>
+          <th class="r_title_first"><label><input type="radio" name="rtype" data-code="${play_5.code}" data-cateName="${play_5.cateName}" data-number="5">${play_5.cateName}</label></th>
+          <th class="r_title_first"><label><input type="radio" name="rtype" data-code="${play_6.code}" data-cateName="${play_6.cateName}" data-number="6">${play_6.cateName}</label></th>
+          <th class="r_title_first"><label><input type="radio" name="rtype" data-code="${play_7.code}" data-cateName="${play_7.cateName}" data-number="7">${play_7.cateName}</label></th>
+          <th class="r_title_first"><label><input type="radio" name="rtype" data-code="${play_8.code}" data-cateName="${play_8.cateName}" data-number="8">${play_8.cateName}</label></th>
+          <th class="r_title_first"><label><input type="radio" name="rtype" data-code="${play_9.code}" data-cateName="${play_9.cateName}" data-number="2">${play_9.cateName}</label></th>
+          <th class="r_title_first"><label><input type="radio" name="rtype" data-code="${play_10.code}" data-cateName="${play_10.cateName}" data-number="3">${play_10.cateName}</label></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td colspan="1" class="lh_td"><div class="clear r_lh_title_sencord">
+          <div class="clear">
+              <span class="border_1_1">赔率</span>
+          </div>
+      </div></td>
+          <td colspan="1" class="lh_td"><div class="clear r_lh_title_sencord">
+              <div class="clear">
+                  <span class="border_1_1">赔率</span>
+              </div>
+          </div></td>
+          <td colspan="1" class="lh_td"><div class="clear r_lh_title_sencord">
+              <div class="clear">
+                  <span class="border_1_1">赔率</span>
+              </div>
+          </div></td>
+          <td colspan="1" class="lh_td"><div class="clear r_lh_title_sencord">
+              <div class="clear">
+                  <span class="border_1_1">赔率</span>
+              </div>
+          </div></td>
+          <td colspan="1" class="lh_td"><div class="clear r_lh_title_sencord">
+              <div class="clear">
+                  <span class="border_1_1">赔率</span>
+              </div>
+          </div></td>
+          <td colspan="1" class="lh_td"><div class="clear r_lh_title_sencord">
+              <div class="clear">
+                  <span class="border_1_1">赔率</span>
+              </div>
+          </div></td>
+          <td colspan="1" class="lh_td"><div class="clear r_lh_title_sencord">
+              <div class="clear">
+                  <span class="border_1_1">赔率</span>
+              </div>
+          </div></td>
+          <td colspan="1" class="lh_td"><div class="clear r_lh_title_sencord">
+              <div class="clear">
+                  <span class="border_1_1">赔率</span>
+              </div>
+          </div></td>
+          <td colspan="1" class="lh_td"><div class="clear r_lh_title_sencord">
+              <div class="clear">
+                  <span class="border_1_1">赔率</span>
+              </div>
+          </div></td>
+      </tr>
+        <tr>
+          <td><b class="text-danger" id="${play_1.id?c}"></b></td>
+          <td><b class="text-danger" id="${play_2.id?c}"></b></td>
+          <td><b class="text-danger" id="${play_3.id?c}"></b></td>
+          <td><b class="text-danger" id="${play_5.id?c}"></b></td>
+          <td><b class="text-danger" id="${play_6.id?c}"></b></td>
+          <td><b class="text-danger" id="${play_7.id?c}"></b></td>
+          <td><b class="text-danger" id="${play_8.id?c}"></b></td>
+          <td><b class="text-danger" id="${play_9.id?c}"></b></td>
+          <td><b class="text-danger" id="${play_10.id?c}"></b></td>
+        </tr>
+      </tbody>
+    </table>
+<div class="table  table-bet  redTable data-betArea">
+<div class="tab-content" id="threeHtml">
+   <table class="table table-bordered table-bet">
+      <thead>
+        <tr>
+          <th class="r_title_first">号</th>
+          <th class="r_title_first">勾选</th>
+          <th class="r_title_first">号</th>
+          <th class="r_title_first">勾选</th>
+        </tr>
+      </thead>
+      <tbody class="table-data">
+        <tr>
+   			<td width="40" class="data-focus-1 data-focus t_border1" data-playId="1"><span class="redball-sm">01</span></td>
+          	<td class="data-focus-1 data-focus data-chbox" data-playId="1" data-value="01">
+      	  		<span class="xy"></span>
+      		</td>
+      		<td  width="40" class="data-focus-7 data-focus t_border1" data-playId="7"><span class="redball-sm">07</span></td>
+          	<td class="data-focus-7 data-focus data-chbox" data-playId="7" data-value="07">
+      	  		<span class="xy"></span>
+      		</td>
+        </tr>
+        <tr>
+   			<td width="40" class="data-focus-2 data-focus t_border1" data-playId="2"><span class="redball-sm">02</span></td>
+          	<td class="data-focus-2 data-focus data-chbox" data-playId="2" data-value="02">
+      	  		<span class="xy"></span>
+      		</td>
+      		<td  width="40" class="data-focus-8 data-focus t_border1" data-playId="8"><span class="redball-sm">08</span></td>
+          	<td class="data-focus-8 data-focus data-chbox" data-playId="8" data-value="08">
+      	  		<span class="xy"></span>
+      		</td>
+        </tr>
+        <tr>
+   			<td width="40" class="data-focus-3 data-focus t_border1" data-playId="3"><span class="redball-sm">03</span></td>
+          	<td class="data-focus-3 data-focus data-chbox" data-playId="3" data-value="03">
+      	  		<span class="xy"></span>
+      		</td>
+      		<td width="40" class="data-focus-9 data-focus t_border1" data-playId="9"><span class="redball-sm">09</span></td>
+          	<td class="data-focus-9 data-focus data-chbox" data-playId="9" data-value="09">
+      	  		<span class="xy"></span>
+      		</td>
+        </tr>
+        <tr>
+   			<td width="40" class="data-focus-4 data-focus t_border1" data-playId="4"><span class="redball-sm">04</span></td>
+          	<td class="data-focus-4 data-focus data-chbox" data-playId="4" data-value="04">
+      	  		<span class="xy"></span>
+      		</td>
+      		<td width="40" class="data-focus-10 data-focus t_border1" data-playId="10"><span class="redball-sm">10</span></td>
+          	<td class="data-focus-10 data-focus data-chbox" data-playId="10" data-value="10">
+      	  		<span class="xy"></span>
+      		</td>
+        </tr>
+        <tr>
+   			<td width="40" class="data-focus-5 data-focus t_border1" data-playId="5"><span class="redball-sm">05</span></td>
+          	<td class="data-focus-5 data-focus data-chbox" data-playId="5" data-value="05">
+      	  		<span class="xy"></span>
+      		</td>
+      		<td  width="40" class="data-focus-11 data-focus t_border1" data-playId="11"><span class="redball-sm">11</span></td>
+          	<td class="data-focus-11 data-focus data-chbox" data-playId="11" data-value="11">
+      	  		<span class="xy"></span>
+      		</td>
+        </tr>
+        <tr>
+   			<td width="40" class="data-focus-6 data-focus t_border1" data-playId="6"><span class="redball-sm">06</span></td>
+          	<td class="data-focus-6 data-focus data-chbox" data-playId="6" data-value="06">
+      	  		<span class="xy"></span>
+      		</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+<!--#include virtual="/page/game/include/bar-bet.html"-->
+</div>
+<input type="hidden" id="ck-bet-type" value="ZX" />
+<script type="text/javascript">
+    $(function () {
+        LMZX.init();
+        lotteryManager.up({startCallback:gameManager.startCallback,stopCallback:gameManager.stopCallback});
+    })
+</script>

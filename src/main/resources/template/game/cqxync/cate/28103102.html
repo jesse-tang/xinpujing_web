@@ -1,0 +1,87 @@
+<table class="table table-bordered table-bet" id="data-ZX1" style="float:left; width: 32%; margin-right:2%">
+   <thead>
+     <tr>
+       <th colspan="5" class="r_title_first">第一位</th>
+     </tr>
+   </thead>
+   <tbody class="table-data">
+ 	<#assign playList= 1..20 />
+       	<#list 0..4 as tr>
+        <tr>
+        	<#list 0..3 as td>
+        	<#assign play= playList[tr + td * 5] />
+        	<#if play < 10>
+     	 		<#assign play= "0"+play />
+	     	<#else>
+				<#assign play= ""+play />
+			</#if>
+            <td class="data-focus-${play} data-focus" data-playId="${play}" data-value="${play}"><span class="redball-sm">${play}</span></td>
+            </#list>
+        </tr>
+       </#list>
+   </tbody>
+ </table>
+
+<table class="table table-bordered table-bet" id="data-ZX2" style="float:left; width: 32%; margin-right:2%">
+   <thead>
+     <tr>
+       <th colspan="5" class="r_title_first">第二位</th>
+     </tr>
+   </thead>
+   <tbody class="table-data">
+ 	<#assign playList= 1..20 />
+       	<#list 0..4 as tr>
+        <tr>
+        	<#list 0..3 as td>
+        	<#assign play= playList[tr + td * 5] />
+        	<#if play < 10>
+     	 		<#assign play= "0"+play />
+	     	<#else>
+				<#assign play= ""+play />
+			</#if>
+            <td class="data-focus-${play} data-focus" data-playId="${play}" data-value="${play}"><span class="redball-sm">${play}</span></td>
+            </#list>
+        </tr>
+       </#list>
+   </tbody>
+ </table>
+
+<table class="table table-bordered table-bet" id="data-ZX3" style="float:left;width: 32%;">
+   <thead>
+     <tr>
+       <th colspan="5" class="r_title_first">第三位</th>
+     </tr>
+   </thead>
+   <tbody class="table-data">
+ 	<#assign playList= 1..20 />
+       	<#list 0..4 as tr>
+        <tr>
+        	<#list 0..3 as td>
+        	<#assign play= playList[tr + td * 5] />
+        	<#if play < 10>
+     	 		<#assign play= "0"+play />
+	     	<#else>
+				<#assign play= ""+play />
+			</#if>
+            <td class="data-focus-${play} data-focus" data-playId="${play}" data-value="${play}"><span class="redball-sm">${play}</span></td>
+            </#list>
+        </tr>
+       </#list>
+   </tbody>
+ </table>
+<div>
+	<#assign code="28103102" />
+	<#assign playList=playMap[code]/>
+	<#assign play = playList[0] />
+  <p class="betarea2_pl" id="playCate" name="rtype" data-code="${play.code}" data-cateName="${play.cateName}"> 
+  	玩法：<label class="lm_name">${play.cateName}</label>
+  	<span>  赔率：<label class="lm_pl" id="${play.id?c}"></label></span></p>
+</div>
+<input type="hidden" id="ck-bet-type" value="DW3_Table" />
+<div class="clear"></div>
+<script type="text/javascript">
+$(function(){
+	ZX3.init();
+	lotteryManager.up({startCallback:gameManager.startCallback,stopCallback:gameManager.stopCallback});
+});
+</script>

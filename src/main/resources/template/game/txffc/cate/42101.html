@@ -1,0 +1,122 @@
+<!--#include virtual="/page/game/include/bar-bet.html"-->
+<div class="table  table-bet  redTable data-betArea">
+<table class="table table-bordered table-bet pull-left w25">
+    <thead>
+       <tr>
+            <th colspan="3" class="r_title_first">一字组合</th>
+        </tr>
+        <tr>
+            <th colspan="3" class=""><div class="clear r_title_sencord">
+                <div class="clear">
+                    <span class="border_001">号码</span>
+                    <span class="border_002" >赔率</span>
+                    <span class="border_003">金额</span><i></i>
+                </div>
+            </div></th>
+        </tr>
+    </thead>
+    <tbody>
+        <#assign playList= playMap["42101101"] />
+       	<#list playList as play>
+	       	<tr>
+	        <td class="data-focus-${play.id?c} data-focus t_border1" data-playId="${play.id?c}"><i class="redball-sm">${play.alias}</i></td>
+	        <td class="data-focus-${play.id?c} data-focus t_border2" data-playId="${play.id?c}"><b class="text-danger data-block" data-playId="${play.id?c}"></b></td>
+	        <td class="data-focus-${play.id?c} t_border3" data-playId="${play.id?c}">
+	            <input type="text" id="${play.id?c}" class="bet-input data-bet" data-playId="${play.id?c}" data-code="${play.code}" data-cateName="${play.cateName}" data-value="${play.value}">
+	        </td>
+	        </tr>
+        </#list>
+    </tbody>
+</table>
+<table class="table table-bordered table-bet pull-left w25">
+    <thead>
+       <tr>
+            <th colspan="3" class="r_title_first">前三跨度</th>
+        </tr>
+        <tr>
+            <th colspan="3" class=""><div class="clear r_title_sencord">
+                <div class="clear">
+                    <span class="border_001">号码</span>
+                    <span class="border_002" >赔率</span>
+                    <span class="border_003">金额</span><i></i>
+                </div>
+            </div></th>
+        </tr>
+    </thead>
+    <tbody>
+        <#assign playList= playMap["42101102"] />
+       	<#list playList as play>
+	       	<tr>
+	        <td class="data-focus-${play.id?c} data-focus t_border1" data-playId="${play.id?c}"><i class="redball-sm">${play.alias}</i></td>
+	        <td class="data-focus-${play.id?c} data-focus t_border2" data-playId="${play.id?c}"><b class="text-danger data-block" data-playId="${play.id?c}"></b></td>
+	        <td class="data-focus-${play.id?c} t_border3" data-playId="${play.id?c}">
+	            <input type="text" id="${play.id?c}" class="bet-input data-bet" data-playId="${play.id?c}" data-code="${play.code}" data-cateName="${play.cateName}" data-value="${play.value}">
+	        </td>
+	        </tr>
+        </#list>
+    </tbody>
+</table>
+<table class="table table-bordered table-bet pull-left w25">
+    <thead>
+       <tr>
+            <th colspan="3" class="r_title_first">中三跨度</th>
+        </tr>
+        <tr>
+            <th colspan="3" class=""><div class="clear r_title_sencord">
+                <div class="clear">
+                    <span class="border_001">号码</span>
+                    <span class="border_002" >赔率</span>
+                    <span class="border_003">金额</span><i></i>
+                </div>
+            </div></th>
+        </tr>
+    </thead>
+    <tbody>
+        <#assign playList= playMap["42101103"] />
+       	<#list playList as play>
+	       	<tr>
+	        <td class="data-focus-${play.id?c} data-focus t_border1" data-playId="${play.id?c}"><i class="redball-sm">${play.alias}</i></td>
+	        <td class="data-focus-${play.id?c} data-focus t_border2" data-playId="${play.id?c}"><b class="text-danger data-block" data-playId="${play.id?c}"></b></td>
+	        <td class="data-focus-${play.id?c} t_border3" data-playId="${play.id?c}">
+	            <input type="text" id="${play.id?c}" class="bet-input data-bet" data-playId="${play.id?c}" data-code="${play.code}" data-cateName="${play.cateName}" data-value="${play.value}">
+	        </td>
+	        </tr>
+        </#list>
+    </tbody>
+</table>
+<table class="table table-bordered table-bet pull-left w25">
+    <thead>
+        <tr>
+            <th colspan="3" class="r_title_first">后三跨度</th>
+        </tr>
+        <tr>
+            <th colspan="3" class=""><div class="clear r_title_sencord">
+                <div class="clear">
+                    <span class="border_001">号码</span>
+                    <span class="border_002" >赔率</span>
+                    <span class="border_003">金额</span><i></i>
+                </div>
+            </div></th>
+        </tr>
+    </thead>
+    <tbody>
+        <#assign playList= playMap["42101104"] />
+       	<#list playList as play>
+	       	<tr>
+	        <td class="data-focus-${play.id?c} data-focus t_border1" data-playId="${play.id?c}"><i class="redball-sm">${play.alias}</i></td>
+	        <td class="data-focus-${play.id?c} data-focus t_border2" data-playId="${play.id?c}"><b class="text-danger data-block" data-playId="${play.id?c}"></b></td>
+	        <td class="data-focus-${play.id?c} t_border3" data-playId="${play.id?c}">
+	            <input type="text" id="${play.id?c}" class="bet-input data-bet" data-playId="${play.id?c}" data-code="${play.code}" data-cateName="${play.cateName}" data-value="${play.value}">
+	        </td>
+	        </tr>
+        </#list>
+    </tbody>
+</table>
+</div>
+<!--#include virtual="/page/game/include/bar-bet.html"-->
+<script type="text/javascript">
+$(function(){
+	text.init();
+    lotteryManager.up({startCallback:gameManager.startCallback,stopCallback:gameManager.stopCallback});
+});
+</script>

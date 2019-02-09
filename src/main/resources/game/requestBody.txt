@@ -1,0 +1,60 @@
+--------------------------92bb7e68cd98f9d5
+Content-Disposition: form-data; name="status"
+
+1
+--------------------------92bb7e68cd98f9d5
+Content-Disposition: form-data; name="customerid"
+
+1248
+--------------------------92bb7e68cd98f9d5
+Content-Disposition: form-data; name="sdpayno"
+
+m2018010415474721186
+--------------------------92bb7e68cd98f9d5
+Content-Disposition: form-data; name="sdorderno"
+
+20180104154744878104
+--------------------------92bb7e68cd98f9d5
+Content-Disposition: form-data; name="total_fee"
+
+1.00
+--------------------------92bb7e68cd98f9d5
+Content-Disposition: form-data; name="paytype"
+
+gzhpay
+--------------------------92bb7e68cd98f9d5
+Content-Disposition: form-data; name="remark"
+--
+Content-Disposition: form-data; name="status"
+
+1
+--------------------------92bb7e68cd98f9d5
+Content-Disposition: form-data; name="customerid"
+
+1248
+--------------------------92bb7e68cd98f9d5
+Content-Disposition: form-data; name="sdpayno"
+
+m2018010415474721186
+--------------------------92bb7e68cd98f9d5
+Content-Disposition: form-data; name="sdorderno"
+
+20180104154744878104
+--------------------------92bb7e68cd98f9d5
+Content-Disposition: form-data; name="total_fee"
+
+1.00
+--------------------------92bb7e68cd98f9d5
+Content-Disposition: form-data; name="paytype"
+
+gzhpay
+--------------------------92bb7e68cd98f9d5
+Content-Disposition: form-data; name="remark"
+
+null
+--------------------------92bb7e68cd98f9d5
+Content-Disposition: form-data; name="sign"
+
+5a32caf54a1336fe049e36a232eb3d9b
+--------------------------92bb7e68cd98f9d5--
+;

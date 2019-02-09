@@ -1,0 +1,84 @@
+ 
+<table class="table table-bordered table-bet" id="data-DM"  style="float:left; width: 49%; margin-right:2%">
+   <thead>
+     <tr>
+       <th colspan="6" class="r_title_first">主肖</th>
+     </tr>
+   </thead>
+   <tbody class="table-data">
+   	<#assign playList= SXS />
+ 	<#assign hong = ["01", "02", "07", "08", "12", "13", "18", "19", "23", "24", "29", "30", "34", "35", "40", "45", "46"]/> <#--红 -->
+   	<#assign lang = ["03", "04", "09", "10", "14", "15", "20", "25", "26", "31", "36", "37", "41", "42", "47", "48"]/> <#--蓝 -->
+   	<#assign lu = ["05", "06", "11", "16", "17", "21", "22", "27", "28", "32", "33", "38", "39", "43", "44", "49"]/> <#--绿 -->
+ 	<#list SXS as tr>
+     <tr class="data-SX">
+		<td width="40">${tr}</td>
+	<#list SXS_N[tr_index] as td>
+		<#if hong?seq_contains(td)>
+				<#assign cs= "ball-c ball-red" />
+		<#elseif lang?seq_contains(td)>
+			<#assign cs= "ball-c ball-blue" />
+		<#else>
+			<#assign cs= "ball-c ball-gree" />
+		</#if>
+		<td width="40" class="data-focus-${td} data-focus" data-value="${td}"><span data-css="${cs}">${td}</span></td>
+	</#list>
+	<#if SXS_N[tr_index]?size < 5>
+		<td width="40"></td>
+		</#if>	
+     </tr>
+     </#list>
+   </tbody>
+ </table>
+<table class="table table-bordered table-bet" id="data-TM" style="float:left;width: 49%;">
+   <thead>
+     <tr>
+       <th colspan="6" class="r_title_first">拖尾数</th>
+     </tr>
+   </thead>
+   <tbody class="table-data">
+   	<#assign playList= SXS />
+ 	<#assign hong = ["01", "02", "07", "08", "12", "13", "18", "19", "23", "24", "29", "30", "34", "35", "40", "45", "46"]/> <#--红 -->
+   	<#assign lang = ["03", "04", "09", "10", "14", "15", "20", "25", "26", "31", "36", "37", "41", "42", "47", "48"]/> <#--蓝 -->
+   	<#assign lu = ["05", "06", "11", "16", "17", "21", "22", "27", "28", "32", "33", "38", "39", "43", "44", "49"]/> <#--绿 -->
+ 	<#list 1..9 as tr>
+     <tr class="data-WS">
+		<td width="40">${tr}尾</td>
+	<#list WEI[tr] as td>
+		<#if hong?seq_contains(td)>
+				<#assign cs= "ball-c ball-red" />
+		<#elseif lang?seq_contains(td)>
+			<#assign cs= "ball-c ball-blue" />
+		<#else>
+			<#assign cs= "ball-c ball-gree" />
+		</#if>
+		<td width="40" class="data-focus-${td} data-focus" data-value="${td}"><span data-css="${cs}">${td}</span></td>
+	</#list>
+	<#if WEI[tr]?size < 5>
+		<td width="40"></td>
+	</#if>	
+     </tr>
+     </#list>
+     <tr class="data-WS">
+		<td width="40">0尾</td>
+	<#list WEI[0] as td>
+		<#if hong?seq_contains(td)>
+				<#assign cs= "ball-c ball-red" />
+		<#elseif lang?seq_contains(td)>
+			<#assign cs= "ball-c ball-blue" />
+		<#else>
+			<#assign cs= "ball-c ball-gree" />
+		</#if>
+		<td width="40" class="data-focus-${td} data-focus" data-value="${td}"><span data-css="${cs}">${td}</span></td>
+	</#list>
+		<td width="40"></td>
+     </tr>
+   </tbody>
+ </table>
+ <input type="hidden" id="ck-bet-type" value="SX_CHUAN_WS" />
+<script type="text/javascript">
+$(function(){
+	SXWS.init();
+	lotteryManager.up({startCallback:gameManager.startCallback,stopCallback:gameManager.stopCallback});
+});
+</script>

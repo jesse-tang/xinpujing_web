@@ -1,0 +1,37 @@
+<table class="table table-bordered table-bet">
+   <thead>
+       <tr>
+         <th class="r_title_first">尾数</th>
+         <th class="r_title_first">号码</th>
+         <th class="r_title_first">勾选</th>
+         <th class="r_title_first">尾数</th>
+         <th class="r_title_first">号码</th>
+         <th class="r_title_first">勾选</th>
+       </tr>
+   </thead>
+     <tbody>
+      	<#list 0..9 as play>
+      	<#if play_index = 0 >
+       <tr>
+       </#if>
+         <td class="data-focus-${play_index} data-focus" data-playId="${play_index}">${play}尾</td>
+         <td class="data-focus-${play_index} data-focus" data-playId="${play_index}">${WEI[play]?join(".")}</td>
+      	<td class="data-focus-${play_index} data-focus data-chbox" data-playId="${play_index}" data-value="${WEI[play]?join(",")}">
+      	  <span class="xy"></span>
+      	</td>
+	<#if (play_index+1)%2 = 0>
+       	</tr><tr>
+       	</#if>
+        <#if !play_has_next>
+        </tr>
+        </#if>
+	</#list>
+	<input type="hidden" id="ck-bet-type" value="PENG" />
+   </tbody>
+</table>
+<script type="text/javascript">
+$(function(){
+	PENG.init();
+	lotteryManager.up({startCallback:gameManager.startCallback,stopCallback:gameManager.stopCallback});
+});
+</script>

@@ -1,0 +1,24 @@
+<!--#include virtual="/page/game/include/bar-bet.html"-->
+<div class="table  table-bet  redTable data-betArea">
+<ul class="nav nav-tabs">
+    <#assign playCateList= playCateMap["70204"]> <#-- 二级跟目录 -->
+    <#list playCateList as cate>
+    	<#if cate_index == 0>
+    		<li class="active"><a onclick="menu.tab('/data/game/${game.code}/cate/${cate.code}.html','threeHtml')">${cate.name}</a></li>
+    	<#else>
+    		<li><a onclick="menu.tab('/data/game/${game.code}/cate/${cate.code}.html','threeHtml')">${cate.name}</a></li>
+    	</#if>
+    </#list>
+</ul>
+
+<div class="tab-content" id="threeHtml">
+        <!--#include virtual="/data/game/${game.code}/cate/${playCateList[0].code}.html"-->
+</div>
+<!--#include virtual="/page/game/include/bar-bet.html"-->
+</div>
+<script type="text/javascript">
+$(function(){
+    $('#quickBetDiv').css('display', 'none')
+	menu.twoTab();
+});
+</script>

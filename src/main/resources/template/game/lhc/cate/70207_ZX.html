@@ -1,0 +1,56 @@
+ <table class="table table-bordered table-bet">
+      <thead>
+        <tr>
+          <th class="r_title_first">号</th>
+          <th class="r_title_first">勾选</th>
+          <th class="r_title_first">号</th>
+          <th class="r_title_first">勾选</th>
+          <th class="r_title_first">号</th>
+          <th class="r_title_first">勾选</th>
+          <th class="r_title_first">号</th>
+          <th class="r_title_first">勾选</th>
+          <th class="r_title_first">号</th>
+          <th class="r_title_first">勾选</th>
+        </tr>
+      </thead>
+      <tbody class="table-data">
+      	<#assign playList= 1..49 />
+    	<#assign hong = ["01", "02", "07", "08", "12", "13", "18", "19", "23", "24", "29", "30", "34", "35", "40", "45", "46"]/> <#--红 -->
+      	<#assign lang = ["03", "04", "09", "10", "14", "15", "20", "25", "26", "31", "36", "37", "41", "42", "47", "48"]/> <#--蓝 -->
+      	<#assign lu = ["05", "06", "11", "16", "17", "21", "22", "27", "28", "32", "33", "38", "39", "43", "44", "49"]/> <#--绿 -->
+    	<#list 0..9 as tr>
+        <tr>
+        	<#list 0..4 as td>
+        	<#assign index = (td * 10 + tr) />
+        	<#if index != 49>
+        	<#assign play = playList[td * 10 + tr] />
+        	<#if play < 10>
+        	 	<#assign play= "0"+play />
+        	<#else>
+   				<#assign play= ""+play />
+   			</#if>
+        	<#if hong?seq_contains(play)>
+   				<#assign cs= "bColorR" />
+   			<#elseif lang?seq_contains(play)>
+   				<#assign cs= "bColorB" />
+   			<#else>
+   				<#assign cs= "bColorG" />
+   			</#if>
+   			<td  width="40" class="data-focus-${play} data-focus" data-playId="${play}"><span class="${cs}">${play}</span></td>
+          	<td class="data-focus-${play} data-focus data-chbox" data-playId="${play}" data-value="${play}">
+      	  		<span class="xy"></span>
+      		</td>
+            </#if>
+         	</#list>
+        </tr>
+        </#list>
+      </tbody>
+    </table>
+    <input type="hidden" id="ck-bet-type" value="LMZX" />
+ 	<input type="hidden" id="playCate"  data-maxNumber="8" />
+<script type="text/javascript">
+$(function(){
+	LMZX.init();
+	lotteryManager.up({startCallback:gameManager.startCallback,stopCallback:gameManager.stopCallback});
+});
+</script>

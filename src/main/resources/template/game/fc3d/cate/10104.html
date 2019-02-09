@@ -1,0 +1,82 @@
+<!--#include virtual="/page/game/include/bar-bet.html"-->
+<div class="table  table-bet  redTable data-betArea">
+	<table class="table table-bordered table-bet">
+	    <thead>
+	        <tr>
+	            <th colspan="12" class="r_title_first">和数</th>
+	        </tr>
+	        
+	    </thead>
+	    <tbody>
+	    <tr>
+	    	<td colspan="3" class="lh_td"><div class="clear r_lh_title_sencord">
+                <div class="clear">
+                    <span class="border_001 lh_border_001">号码</span>
+                    <span class="border_002 lh_border_001" >赔率</span>
+                    <span class="lh_border_003 lh_border_001_not_right_line">金额</span><i></i>
+                </div>
+            </div></td>
+            <td colspan="3" class="lh_td"><div class="clear r_lh_title_sencord">
+                <div class="clear">
+                    <span class="border_001 lh_border_001">号码</span>
+                    <span class="border_002 lh_border_001" >赔率</span>
+                    <span class="lh_border_003 lh_border_001_not_right_line">金额</span><i></i>
+                </div>
+            </div></td>
+            <td colspan="3" class="lh_td"><div class="clear r_lh_title_sencord">
+                <div class="clear">
+                    <span class="border_001 lh_border_001">号码</span>
+                    <span class="border_002 lh_border_001" >赔率</span>
+                    <span class="lh_border_003 lh_border_001_not_right_line">金额</span><i></i>
+                </div>
+            </div></td>
+            <td colspan="3" class="lh_td"><div class="clear r_lh_title_sencord">
+                <div class="clear">
+                    <span class="border_001 lh_border_001">号码</span>
+                    <span class="border_002 lh_border_001" >赔率</span>
+                    <span class="lh_border_003 lh_border_001_not_right_line">金额</span><i></i>
+                </div>
+            </div></td>
+            
+	    </tr>
+	    	<#assign playList= playMap["10104101"] />
+	       	<#list 0..6 as tr>
+	        <tr>
+	        	<#list 0..3 as td>
+	        	<#assign play= playList[tr + td * 7] />
+	            <td class="data-focus-${play.id?c} data-focus t_lh_border1" data-playId="${play.id?c}"><i class="redball-sm">${play.alias}</i></td>
+	            <td class="data-focus-${play.id?c} data-focus t_lh_border2" data-playId="${play.id?c}"><b class="text-danger data-block" data-playId="${play.id?c}"></b></td>
+	            <td class="data-focus-${play.id?c} t_lh_border3" data-playId="${play.id?c}">
+	                <input type="text" id="${play.id?c}" class="bet-input data-bet" data-playId="${play.id?c}" data-code="${play.code}" data-cateName="${play.cateName}" data-value="${play.value}">
+	            </td>
+	            </#list>
+	        </tr>
+	       </#list>
+	       <tr>
+            <#assign playList= playMap["10104102"] />
+        	<#list playList as play>
+            <td class="data-focus-${play.id?c} data-focus t_lh_border1" data-playId="${play.id?c}">${play.alias}</td>
+            <td class="data-focus-${play.id?c} data-focus t_lh_border2" data-playId="${play.id?c}"><b class="text-danger data-block" data-playId="${play.id?c}"></b></td>
+            <td class="data-focus-${play.id?c} t_lh_border3" data-playId="${play.id?c}">
+                <input type="text" id="${play.id?c}" class="bet-input data-bet" data-playId="${play.id?c}" data-code="${play.code}" data-cateName="${play.cateName}" data-value="${play.value}">
+            </td>
+            </#list>
+            <#assign playList= playMap["10104103"] />
+        	<#list playList as play>
+            <td class="data-focus-${play.id?c} data-focus t_lh_border1" data-playId="${play.id?c}">${play.alias}</td>
+            <td class="data-focus-${play.id?c} data-focus t_lh_border2" data-playId="${play.id?c}"><b class="text-danger data-block" data-playId="${play.id?c}"></b></td>
+            <td class="data-focus-${play.id?c} t_lh_border3" data-playId="${play.id?c}">
+                <input type="text" id="${play.id?c}" class="bet-input data-bet" data-playId="${play.id?c}" data-code="${play.code}" data-cateName="${play.cateName}" data-value="${play.value}">
+            </td>
+            </#list>
+        	</tr>
+	    </tbody>
+	</table>
+<!--#include virtual="/page/game/include/bar-bet.html"-->
+</div>
+<script type="text/javascript">
+$(function(){
+	text.init();
+	lotteryManager.up({startCallback:gameManager.startCallback,stopCallback:gameManager.stopCallback});
+});
+</script>

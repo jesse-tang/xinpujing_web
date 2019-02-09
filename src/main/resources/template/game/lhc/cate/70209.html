@@ -1,0 +1,86 @@
+<!--#include virtual="/page/game/include/bar-bet.html"-->
+<#assign play_3= playMap["70208101"][0]/>
+<#assign play_4= playMap["70208102"][0]/>
+<#assign play_5= playMap["70208103"][0]/>
+<#assign play_6= playMap["70208104"][0]/>
+<table class="table table-bordered table-bet">
+      <thead>
+        <tr>
+          <th class="r_title_first">类别</th>
+          <th class="r_title_first"><label><input type="radio" name="rtype" data-code="${play_3.code}" checked="checked" data-cateName="${play_3.cateName}" data-number="3" data-maxNumber="8">${play_3.cateName}</label></th>
+          <th class="r_title_first"><label><input type="radio" name="rtype" data-code="${play_4.code}" data-cateName="${play_4.cateName}" data-number="4" data-maxNumber="8">${play_4.cateName}</label></th>
+          <th class="r_title_first"><label><input type="radio" name="rtype" data-code="${play_5.code}" data-cateName="${play_5.cateName}" data-number="5" data-maxNumber="8">${play_5.cateName}</label></th>
+          <th class="r_title_first"><label><input type="radio" name="rtype" data-code="${play_6.code}" data-cateName="${play_6.cateName}" data-number="6" data-maxNumber="8">${play_6.cateName}</label></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>赔率</td>
+          <td><b class="text-danger" id="${play_3.id?c}"></b></td>
+          <td><b class="text-danger" id="${play_4.id?c}"></b></td>
+          <td><b class="text-danger" id="${play_5.id?c}"></b></td>
+          <td><b class="text-danger" id="${play_6.id?c}"></b></td>
+        </tr>
+      </tbody>
+    </table>
+<div class="table  table-bet  redTable data-betArea">
+<div class="tab-content" id="threeHtml">
+   <table class="table table-bordered table-bet">
+      <thead>
+        <tr>
+          <th class="r_title_first">号</th>
+          <th class="r_title_first">勾选</th>
+          <th class="r_title_first">号</th>
+          <th class="r_title_first">勾选</th>
+          <th class="r_title_first">号</th>
+          <th class="r_title_first">勾选</th>
+          <th class="r_title_first">号</th>
+          <th class="r_title_first">勾选</th>
+          <th class="r_title_first">号</th>
+          <th class="r_title_first">勾选</th>
+        </tr>
+      </thead>
+      <tbody class="table-data">
+        <#assign playList= 1..49 />
+    	<#assign hong = ["01", "02", "07", "08", "12", "13", "18", "19", "23", "24", "29", "30", "34", "35", "40", "45", "46"]/> <#--红 -->
+      	<#assign lang = ["03", "04", "09", "10", "14", "15", "20", "25", "26", "31", "36", "37", "41", "42", "47", "48"]/> <#--蓝 -->
+      	<#assign lu = ["05", "06", "11", "16", "17", "21", "22", "27", "28", "32", "33", "38", "39", "43", "44", "49"]/> <#--绿 -->
+    	<#list 0..9 as tr>
+        <tr>
+        	<#list 0..4 as td>
+        	<#assign index = (td * 10 + tr) />
+        	<#if index != 49>
+        	<#assign play = playList[td * 10 + tr] />
+        	<#if play < 10>
+        	 	<#assign play= "0"+play />
+        	<#else>
+   				<#assign play= ""+play />
+   			</#if>
+        	<#if hong?seq_contains(play)>
+   				<#assign cs= "bColorR" />
+   			<#elseif lang?seq_contains(play)>
+   				<#assign cs= "bColorB" />
+   			<#else>
+   				<#assign cs= "bColorG" />
+   			</#if>
+   			<td  width="40" class="data-focus-${play} data-focus" data-playId="${play}"><span class="${cs}">${play}</span></td>
+          	<td class="data-focus-${play} data-focus data-chbox" data-playId="${play}" data-value="${play}">
+      	  		<span class="xy"></span>
+      		</td>
+            </#if>
+         	</#list>
+        </tr>
+        </#list>
+      </tbody>
+    </table>
+</div>
+<!--#include virtual="/page/game/include/bar-bet.html"-->
+</div>
+<input type="hidden" id="ck-bet-type" value="ZX" />
+<script type="text/javascript">
+$(function(){
+    $('#quickBetDiv').css('display', 'none')
+	LMZX.init();
+	lotteryManager.up({startCallback:gameManager.startCallback,stopCallback:gameManager.stopCallback});
+});
+</script>

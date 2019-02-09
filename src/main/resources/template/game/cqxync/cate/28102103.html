@@ -1,0 +1,40 @@
+<#assign code="28102103" />
+<#assign playList=playMap[code]/>
+<#assign play = playList[0] />
+<table class="table table-bordered table-bet">
+   <thead>
+     <tr>
+       <th colspan="5"  class="r_title_first">${play.cateName}</th>
+     </tr>
+   </thead>
+   <tbody class="table-data">
+ 	<#assign playList= 1..20 />
+       	<#list 0..4 as tr>
+        <tr>
+        	<#list 0..3 as td>
+        	<#assign va = playList[tr + td * 5] />
+        	<#if va < 10>
+     	 		<#assign va= "0"+va />
+	     	<#else>
+				<#assign va= ""+va />
+			</#if>
+            <td class="data-focus-${va} data-focus" data-playId="${va}" data-value="${va}"><i class="redball-sm">${va}</i></td>
+            </#list>
+        </tr>
+       </#list>
+   </tbody>
+ </table>
+
+<div>
+  <p class="betarea2_pl" id="playCate" name="rtype" data-code="${play.code}" data-cateName="${play.cateName}" data-number="2" data-minNumber="2" data-maxNumber="8"> 
+  	玩法：<label class="lm_name">${play.cateName}</label>
+  	<span>  赔率：<label class="lm_pl" id="${play.id?c}"></label></span></p>
+</div>
+<input type="hidden" id="ck-bet-type" value="cNxNTable" />
+<div class="clear"></div>
+<script type="text/javascript">
+$(function(){
+	cNxNTable.init();
+	lotteryManager.up({startCallback:gameManager.startCallback,stopCallback:gameManager.stopCallback});
+});
+</script>

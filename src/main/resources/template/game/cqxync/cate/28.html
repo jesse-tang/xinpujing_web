@@ -1,0 +1,16 @@
+<!-- 导航选项 -->
+<div class="T_nav">
+    <ul class="T_nav_wrap">
+	<li class="T_nav_bg"  onclick="menu.tab('/data/game/${game.code}/cate/28_LM.html','twoHtml')">两面 </li>
+    <#assign playCateList= playCateMap["28"]> <#-- 跟目录 -->
+     <#list playCateList as cate>
+     	<li onclick="menu.tab('/data/game/${game.code}/cate/${cate.code}.html','twoHtml')">${cate.name}</li>
+     </#list>
+</ul>
+    <!--#include virtual="/page/game/include/game_type.html"-->
+</div>
+  <script type="text/javascript">
+$(function(){
+	menu.cateTab();
+});
+</script>

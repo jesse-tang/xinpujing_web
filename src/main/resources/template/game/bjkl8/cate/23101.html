@@ -1,0 +1,63 @@
+<!--#include virtual="/page/game/include/bar-bet.html"-->
+<table class="table table-bordered table-bet">
+      <thead>
+        <tr>
+          <th class="r_title_first">号</th>
+          <th class="r_title_first">勾选</th>
+          <th class="r_title_first">号</th>
+          <th class="r_title_first">勾选</th>
+          <th class="r_title_first">号</th>
+          <th class="r_title_first">勾选</th>
+          <th class="r_title_first">号</th>
+          <th class="r_title_first">勾选</th>
+          <th class="r_title_first">号</th>
+          <th class="r_title_first">勾选</th>
+          <th class="r_title_first">号</th>
+          <th class="r_title_first">勾选</th>
+          <th class="r_title_first">号</th>
+          <th class="r_title_first">勾选</th>
+          <th class="r_title_first">号</th>
+          <th class="r_title_first">勾选</th>
+        </tr>
+      </thead>
+      <tbody class="table-data">
+      	<#assign value = 1..80 /> 
+      	<#list 0..9 as tr>
+        <tr>
+        	<#list 0..7 as td>
+        	<#assign va = value[td * 10 + tr] /> 
+   			<#if va < 10>
+           		<td class="data-focus-0${va} data-focus t_lh_border1" width="40" data-playId="0${va}"><i class="redball-sm">0${va}</i></td>
+          		<td class="data-focus-0${va} data-focus data-chbox" data-playId="0${va}" data-value="0${va}">
+		      	  <span class="xy"></span>
+		      	</td>
+           	<#else>
+           		<td class="data-focus-${va} data-focus t_lh_border1" width="40" data-playId="${va}"><i class="redball-sm">${va}</i></td>
+          		<td class="data-focus-${va} data-focus data-chbox" data-playId="${va}" data-value="${va}">
+		      	  <span class="xy"></span>
+		      	</td>
+           	</#if>
+         </#list>
+        </tr>
+        </#list>
+      </tbody>
+    </table>
+<div style="width:850px">
+	<#assign playCode= "23101"><#--  选1 -->
+	<#assign playCateList= playCateMap[playCode]> <#-- 玩法 -->
+	<#list playCateList as playCate>
+		<input type="hidden" id="playCode_${playCate_index+1}" name="rtype" data-cateName="${playCate.name}" data-code="${playCate.code}" />
+	</#list>	
+  <p class="betarea2_pl"> 
+  	玩法：<label class="lm_name"></label>
+  	<span>  赔率：<label class="lm_pl">0</label></span></p>
+</div>
+<input type="hidden" id="ck-bet-type" value="RX1_5" />
+<div class="clear"></div>
+<!--#include virtual="/page/game/include/bar-bet.html"-->
+<script type="text/javascript">
+$(function(){
+    RX1_5.init();
+	lotteryManager.up({startCallback:gameManager.startCallback,stopCallback:gameManager.stopCallback});
+});
+</script>

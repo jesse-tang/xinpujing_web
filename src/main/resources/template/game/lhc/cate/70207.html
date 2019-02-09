@@ -1,0 +1,71 @@
+<#assign play_4= playMap["70207101"][0]/>
+<#assign play_3= playMap["70207102"][0]/>
+<#assign play_3_2= playMap["70207103"]/>
+<#assign play_2= playMap["70207105"][0]/>
+<#assign play_2_ZT= playMap["70207106"]/>
+<#assign play_TC= playMap["70207107"][0]/>
+<table class="table table-bordered table-bet lianma">
+   	<thead class="header-cat">
+   	<tr>
+   	  <td rowspan="2" style="vertical-align: middle;" class="r_title_first">类别</td>
+         <td>
+         	<label>
+         	<input type="radio" name="rtype" data-code="${play_4.code}" checked="checked" data-cateName="${play_4.cateName}" data-number="4" data-tmNumber="4" onclick="menu.tab('/data/game/${game.code}/cate/70207101.html','two1Html')">
+         	${play_4.cateName}
+         	</label>
+         </td>
+         <td>
+         	<label>
+         	<input type="radio" name="rtype" data-code="${play_3.code}" data-cateName="${play_3.cateName}" data-number="3" onclick="menu.tab('/data/game/${game.code}/cate/70207101.html','two1Html')">
+         	${play_3.cateName}
+         	</label>
+         </td>
+         <td colspan="2">
+         	<label>
+         	<input type="radio" name="rtype" data-code="${play_3_2[0].code}" data-cateName="${play_3_2[0].cateName}" data-number="3" onclick="menu.tab('/data/game/${game.code}/cate/70207101.html','two1Html')">
+         	${play_3_2[0].cateName}</label>
+         </td>
+         <td>
+         	<label><input type="radio" name="rtype" data-code="${play_2.code}" data-cateName="${play_2.cateName}" data-number="2" data-minNumber="2" onclick="menu.tab('/data/game/${game.code}/cate/70207104.html','two1Html')">${play_2.cateName}</label>
+         </td>
+         <td colspan="2"><label><input type="radio" name="rtype" data-code="${play_2_ZT[0].code}" data-cateName="${play_2_ZT[0].cateName}" data-number="2"  data-tmNumber="10" onclick="menu.tab('/data/game/${game.code}/cate/70207104.html','two1Html')">${play_2_ZT[0].cateName}</label></td>
+         <td><label><input type="radio" name="rtype" data-code="${play_TC.code}" data-cateName="${play_TC.cateName}" data-number="2" onclick="menu.tab('/data/game/${game.code}/cate/70207104.html','two1Html')">${play_TC.cateName}</label></td>
+       </tr>
+       <tr>
+       	<td class="r_title_first">${play_4.name}</td>
+       	<td class="r_title_first">${play_3.name}</td>
+       	<td class="r_title_first">${play_3_2[0].name}</td>
+       	<td class="r_title_first">${play_3_2[1].name}</td>
+       	<td class="r_title_first">${play_2.name}</td>
+       	<td class="r_title_first">${play_2_ZT[0].name}</td>
+       	<td class="r_title_first">${play_2_ZT[1].name}</td>
+       	<td class="r_title_first">${play_TC.name}</td>
+       </tr>
+       </thead>
+       <tbody><tr>
+          <td>赔率</td>
+          <td><b class="text-danger" id="${play_4.id?c}"></b></td>
+          <td><b class="text-danger" id="${play_3.id?c}"></b></td>
+          <td><b class="text-danger" id="${play_3_2[0].id?c}"></b><br>
+          </td><td><b class="text-danger" id="${play_3_2[1].id?c}"></b></td>
+          <td><b class="text-danger" id="${play_2.id?c}"></b></td>
+          <td><b class="text-danger" id="${play_2_ZT[0].id?c}"></b><br>
+          </td><td><b class="text-danger" id="${play_2_ZT[1].id?c}"></b></td>
+          <td><b class="text-danger" id="${play_TC.id?c}"></b></td>
+       </tr>
+   </tbody>
+</table>
+
+<div class="table  table-bet redTable data-betArea">
+<div id="two1Html">
+	<!--#include virtual="/data/game/${game.code}/cate/70207101.html"-->
+</div>
+<!--#include virtual="/page/game/include/bar-bet.html"-->
+</div>
+<script type="text/javascript">
+$(function(){
+    $('#quickBetDiv').css('display', 'none');
+	menu.twoTab();
+	oddManager.cateCode();
+});
+</script>
