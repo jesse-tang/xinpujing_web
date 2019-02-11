@@ -1,7 +1,9 @@
 package com.cz.gameplat.lottery.manager;
 
 import com.cz.gameplat.game.dao.GameTimeDao;
+import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.*;
 import org.springframework.beans.factory.annotation.*;
 import com.cz.gameplat.game.service.*;
@@ -22,6 +24,12 @@ public class OpenInfoManager
     GameService gameService;
     @Autowired
     LotteryService lotteryService;
+
+    @Autowired
+    private CacheManager cacheManager;
+
+    @Autowired
+    private RedisTemplate redisTemplate;
 
     @Cacheable(value = { "open_info_cur" }, key = "'id_' + #gameId")
     public GameOpenInfo getCurOpenInfoWithCache(final Integer gameId) throws BusinessException {
