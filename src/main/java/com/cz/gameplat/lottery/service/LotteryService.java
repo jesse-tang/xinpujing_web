@@ -151,7 +151,7 @@ public class LotteryService
         }
         this.checkIsLegalChangeLottery(game, admin);
         if (!game.getTurnLength().equals(po.getTurn().length())) {
-            throw new BusinessException("\u60a8\u8f93\u5165\u7684\u671f\u53f7\u683c\u5f0f\u4e0d\u6b63\u786e\uff0c\u8bf7\u8f93\u5165" + game.getTurnLength() + "\u4f4d\u7684\u671f\u53f7");
+            throw new BusinessException("您输入的期号格式不正确，请输入" + game.getTurnLength() + "\u4f4d\u7684\u671f\u53f7");
         }
         final int result = this.lotteryDao.update(po);
         final Lottery lottery = this.lotteryDao.get(po.getId());
@@ -182,7 +182,7 @@ public class LotteryService
             }
         }
         catch (Exception ex) {
-            LotteryService.logger.error("\u4e24\u9762\u957f\u9f99\u5f02\u5e38\uff1a", (Throwable)ex);
+            LotteryService.logger.error("两面长龙异常：", (Throwable)ex);
         }
     }
     
@@ -197,21 +197,21 @@ public class LotteryService
             }
         }
         catch (Exception ex) {
-            LotteryService.logger.error("\u4e24\u9762\u957f\u9f99\u5f02\u5e38\uff1a", (Throwable)ex);
+            LotteryService.logger.error("两面长龙异常：", (Throwable)ex);
         }
     }
     
     private void caculateLotteryPlayResult(final IPlayWinManager playWinManager, final Lottery lottery) throws BusinessException {
         final long start = System.currentTimeMillis();
         if (LotteryService.logger.isInfoEnabled()) {
-            LotteryService.logger.info("start \u5f00\u5956\u7ed3\u679c\u7edf\u8ba1\u503c: game=" + lottery.getGameId() + ",LotteryBean=" + lottery);
+            LotteryService.logger.info("start 开奖结果统计值: game=" + lottery.getGameId() + ",LotteryBean=" + lottery);
         }
         final List<PlayCate> pcList = this.playCateService.queryByRecordInLottery(lottery.getGameId());
         final Map<String, String> lotteryPlayResult = new HashMap<String, String>();
         for (final PlayCate pc : pcList) {
             final PlayWinBean b = playWinManager.handle(pc, lottery.getOpenNum());
             if (b == null) {
-                LotteryService.logger.error("\u73a9\u6cd5\u672a\u5b9a\u4e49\u914d\u7f6e:" + pc);
+                LotteryService.logger.error("玩法未定义配置:" + pc);
                 throw new BusinessException();
             }
             lotteryPlayResult.put(pc.getCode(), b.getValue());
@@ -228,7 +228,7 @@ public class LotteryService
             e.printStackTrace();
         }
         if (LotteryService.logger.isInfoEnabled()) {
-            LotteryService.logger.info("end \u5f00\u5956\u7ed3\u679c\u7edf\u8ba1\u503c: game=" + lottery.getGameId() + ",LotteryBean=" + lottery + ",time=" + (System.currentTimeMillis() - start));
+            LotteryService.logger.info("end 开奖结果统计值: game=" + lottery.getGameId() + ",LotteryBean=" + lottery + ",time=" + (System.currentTimeMillis() - start));
         }
     }
     
@@ -296,7 +296,7 @@ public class LotteryService
         return cur;
     }
     
-//    @Cacheable(value = { "open_info_pre" }, key = "'id_'+#gameId")
+    @Cacheable(value = { "open_info_pre" }, key = "'id_'+#gameId")
     public Lottery slaveGetPreOpenInfo(final Integer gameId) throws BusinessException {
         final Lottery lo = this.lotteryDao.getPerLottery(gameId);
         return lo;
@@ -364,7 +364,7 @@ public class LotteryService
     public Lottery getNextLottery(final Integer gameId) throws Exception {
         final Game game = this.gameService.get(gameId);
         if (GameJsTypes.JS.getValue() != game.getJsType()) {
-            throw new BusinessException("GAME/JS_ERROR", "\u4e0d\u662f\u6781\u901f\u5f69\u4e0d\u80fd\u8fdb\u884c\u6b64\u64cd\u4f5c", (Object[])null);
+            throw new BusinessException("GAME/JS_ERROR", "不是极速彩不能进行此操作", (Object[])null);
         }
         final Lottery lo = this.slaveGetPreOpenInfo(gameId);
         final Date openTime = DateUtil.getMinute(lo.getOpenTime(), (int)game.getInterval());
@@ -390,7 +390,7 @@ public class LotteryService
     private void handlerRegatherResult(final CollectLottery result) throws Exception {
         Lottery lottery = this.lotteryDao.get(result.getGameId(), result.getTurnNum());
         if (lottery != null) {
-            LogUtil.info("\u5df2\u6709\u5f00\u5956\u7ed3\u679c\uff0c\u5ffd\u7565\u8865\u91c7: gameId=" + lottery.getGameId() + ", turnNum=" + lottery.getTurnNum());
+            LogUtil.info("已有开奖结果，忽略补采: gameId=" + lottery.getGameId() + ", turnNum=" + lottery.getTurnNum());
             return;
         }
         lottery = new Lottery();
@@ -461,7 +461,7 @@ public class LotteryService
             }
             final int gameTurnNumber = Integer.valueOf(gameTime.getTurnNum());
             if (!DateUtil.dateTimeBijiao(DateUtil.getNowTime(), gameTime.getEndTime()) && turnNumber >= gameTurnNumber) {
-                throw new BusinessException("\u672a\u5c01\u76d8\u4e0d\u80fd\u7ed3\u7b97\u3002");
+                throw new BusinessException("未封盘不能结算。");
             }
         }
         if (game.getRules().equals(GameLotteryRules.ADDITIVE.getRule())) {
@@ -470,12 +470,12 @@ public class LotteryService
             if (turn > 0) {
                 final int dateCompareResult = DateUtil.strToDate(DateUtil.dateToStr(lo.getAddTime(), "yyyy-MM-dd")).compareTo(DateUtil.strToDate(DateUtil.getNowDate()));
                 if (dateCompareResult == 1) {
-                    throw new BusinessException("\u672a\u5c01\u76d8\u4e0d\u80fd\u7ed3\u7b97.");
+                    throw new BusinessException("未封盘不能结算.");
                 }
                 if (dateCompareResult == 0) {
                     final GameTime gameTime2 = this.gameTimeService.getByGameIdAndTurn(lo.getGameId(), String.valueOf(turn));
                     if (!DateUtil.dateTimeBijiao(DateUtil.getNowTime(), DateUtil.getNowDate() + " " + gameTime2.getEndTime())) {
-                        throw new BusinessException("\u672a\u5c01\u76d8\u4e0d\u80fd\u7ed3\u7b97.");
+                        throw new BusinessException("未封盘不能结算.");
                     }
                 }
             }
@@ -490,10 +490,10 @@ public class LotteryService
             final Long lotteryTurnNumber = Long.valueOf(lo.getTurnNum());
             final Long num = todayNumber - lotteryTurnNumber;
             if (num < 0L) {
-                throw new BusinessException("\u672a\u5c01\u76d8\u4e0d\u80fd\u7ed3\u7b97!");
+                throw new BusinessException("未封盘不能结算!");
             }
             if (!DateUtil.dateTimeBijiao(DateUtil.getNowTime(), DateUtil.getNowDate() + " " + gameTime.getEndTime()) && num == 0L) {
-                throw new BusinessException("\u672a\u5c01\u76d8\u4e0d\u80fd\u7ed3\u7b97!");
+                throw new BusinessException("未封盘不能结算!");
             }
         }
     }
